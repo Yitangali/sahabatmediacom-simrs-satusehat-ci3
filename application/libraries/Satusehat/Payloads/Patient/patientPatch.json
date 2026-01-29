@@ -1,0 +1,88 @@
+[{
+        "op": "test",
+        "path": "/name",
+        "value": [{
+                "use": "official",
+                "text": "KATHERINE HUITT"
+            }
+        ]
+    }, {
+        "op": "replace",
+        "path": "/name",
+        "value": [{
+                "use": "official",
+                "text": "KATHERINE HUITT"
+            }
+        ]
+    }, {
+        "op": "test",
+        "path": "/gender",
+        "value": "female"
+    }, {
+        "op": "replace",
+        "path": "/gender",
+        "value": "female"
+    }, {
+        "op": "test",
+        "path": "/birthDate",
+        "value": "1925-02-02"
+    }, {
+        "op": "replace",
+        "path": "/birthDate",
+        "value": "1925-02-02"
+    }, {
+        "op": "replace",
+        "path": "/identifier",
+        "value": [{
+                "system": "https://fhir.kemkes.go.id/id/nik",
+                "use": "official",
+                "value": "7402184202251111"
+            }, {
+                "system": "https://fhir.kemkes.go.id/id/ihs-number",
+                "use": "official",
+                "value": "P20394850874"
+            }
+        ]
+    }, {
+        "op": "replace",
+        "path": "/maritalStatus",
+        "value": {
+            "coding": [{
+                    "system": "http://terminology.hl7.org/CodeSystem/v3-MaritalStatus",
+                    "code": "S",
+                    "display": "Single"
+                }
+            ],
+            "text": "Single"
+        }
+    }, {
+        "op": "replace",
+        "path": "/address",
+        "value": [{
+                "use": "home",
+                "line": ["Coolidge Plaza"],
+                "city": "KAB. LAMPUNG UTARA",
+                "postalCode": "55810",
+                "country": "ID",
+                "extension": [{
+                        "url": "https://fhir.kemkes.go.id/r4/StructureDefinition/administrativeCode",
+                        "extension": [{
+                                "url": "province",
+                                "valueCode": "11"
+                            }, {
+                                "url": "city",
+                                "valueCode": "1105"
+                            }, {
+                                "url": "district",
+                                "valueCode": "110504"
+                            }, {
+                                "url": "village",
+                                "valueCode": "1105042015"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+]

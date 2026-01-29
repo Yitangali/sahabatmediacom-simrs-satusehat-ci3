@@ -1,0 +1,9 @@
+php_flag display_errors On
+php_value error_reporting E_ALL & ~E_DEPRECATED & ~E_USER_DEPRECATED
+
+<IfModule authz_core_module>
+    Require all denied
+</IfModule>
+<IfModule !authz_core_module>
+    Deny from all
+</IfModule>
