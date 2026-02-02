@@ -3,13 +3,14 @@
 class SatusehatClient {
     protected $auth;
     protected $config;
+    protected $CI;
 
     public function __construct() {
-        $CI = &get_instance();
-        $CI->load->config('satusehat');
-        $CI->load->library('Satusehat/Core/SatusehatAuth');
-        $this->config   = $CI->config->item('satusehat');
-        $this->auth     = $CI->satusehatauth;
+        $this->CI = &get_instance();
+        $this->CI->load->library('Satusehat/Core/SatusehatConfig');
+        $this->CI->load->library('Satusehat/Core/SatusehatAuth');
+        //$this->config   = $CI->satusehatconfig->get();
+        $this->auth     = $this->CI->satusehatauth;
     }
 
     public function request($method, $endpoint, $payload = null, $headers = []) {
@@ -21,12 +22,12 @@ class SatusehatClient {
             'Accept: application/fhir+json',
         ];
 
-        $ch = curl_init($this->config['base_url'] . $endpoint);
+        $ch = curl_init($this->CI->satusehatconfig->get('base_url') . $endpoint);
 
         $options = [
             CURLOPT_RETURNTRANSFER  => true,
             CURLOPT_CUSTOMREQUEST   => strtoupper($method),
-            CURLOPT_TIMEOUT         => $this->config['timeout'],
+            CURLOPT_TIMEOUT         => $this->CI->satusehatconfig->get('timeout'),
             CURLOPT_HTTPHEADER      => array_merge($defaultHeaders, $headers),
             CURLOPT_SSL_VERIFYPEER  => false // setara --insecure
         ];

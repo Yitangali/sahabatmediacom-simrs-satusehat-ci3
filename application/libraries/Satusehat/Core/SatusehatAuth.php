@@ -7,9 +7,9 @@ class SatusehatAuth {
 
     public function __construct() {
         $this->CI =& get_instance();
-        $this->CI->load->config('satusehat');
+        $this->CI->load->library('Satusehat/Core/SatusehatConfig');
         $this->CI->load->library('Satusehat/Core/SatusehatException');
-        $this->config = $this->CI->config->item('satusehat');
+        $this->config = $this->CI->satusehatconfig->get();
     }
 
     public function getToken() {
