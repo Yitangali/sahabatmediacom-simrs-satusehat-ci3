@@ -83,7 +83,7 @@ class MembuatStrukturOrganisasiDanLokasi {
     }
 
     public function createOrg_DivisiPelayananMedik(array $payload) {
-        $response = $this->request(
+        $response = $this->client->request(
             'POST',
             'Organization',
             $payload
@@ -103,7 +103,7 @@ class MembuatStrukturOrganisasiDanLokasi {
 
     public function createOrg_LayananPenyakitDalam(array $payload) {
         // request() diasumsikan sudah return array (decoded JSON)
-        $response = $this->request(
+        $response = $this->client->request(
             'POST',
             'Organization',
             $payload
@@ -123,7 +123,7 @@ class MembuatStrukturOrganisasiDanLokasi {
 
     public function createOrg_PelayananGawatDarurat(array $payload) {
         // request() diasumsikan sudah mengembalikan array (decoded JSON)
-        $response = $this->request(
+        $response = $this->client->request(
             'POST',
             'Organization',
             $payload
@@ -143,7 +143,7 @@ class MembuatStrukturOrganisasiDanLokasi {
 
     public function createOrg_Farmasi(array $payload) {
         // request() diasumsikan sudah return array (decoded JSON)
-        $response = $this->request(
+        $response = $this->client->request(
             'POST',
             'Organization',
             $payload
@@ -163,7 +163,7 @@ class MembuatStrukturOrganisasiDanLokasi {
 
     public function createLoc_BangsalRawatInapKelas1(array $payload) {
         // request() diasumsikan sudah mengembalikan array (decoded JSON)
-        $response = $this->request(
+        $response = $this->client->request(
             'POST',
             'Location',
             $payload
@@ -183,7 +183,7 @@ class MembuatStrukturOrganisasiDanLokasi {
 
     public function createLoc_Ruang210(array $payload) {
         // request() diasumsikan sudah mengembalikan array (decoded JSON)
-        $response = $this->request(
+        $response = $this->client->request(
             'POST',
             'Location',
             $payload
@@ -203,7 +203,7 @@ class MembuatStrukturOrganisasiDanLokasi {
 
     public function createLoc_Bed2(array $payload) {
         // request() diasumsikan sudah mengembalikan array (decoded JSON)
-        $response = $this->request(
+        $response = $this->client->request(
             'POST', 
             'Location',
             $payload
@@ -223,7 +223,7 @@ class MembuatStrukturOrganisasiDanLokasi {
 
     public function createLoc_BangsalRawatInapKelas2(array $payload) {
         // request() diasumsikan sudah mengembalikan array (decoded JSON)
-        $response = $this->request(
+        $response = $this->client->request(
             'POST',
             'Location',
             $payload
@@ -242,7 +242,7 @@ class MembuatStrukturOrganisasiDanLokasi {
 
     public function createLoc_Ruang208(array $payload) {
         // request() diasumsikan sudah mengembalikan array (decoded JSON)
-        $response = $this->request(
+        $response = $this->client->request(
             'POST',
             'Location',
             $payload
@@ -262,7 +262,7 @@ class MembuatStrukturOrganisasiDanLokasi {
 
     public function createLoc_Bed3(array $payload) {
         // request() diasumsikan sudah mengembalikan array (decoded JSON)
-        $response = $this->request(
+        $response = $this->client->request(
             'POST',
             'Location',
             $payload
@@ -281,7 +281,7 @@ class MembuatStrukturOrganisasiDanLokasi {
 
     public function createLoc_BangsalRawatInapKelas3(array $payload) {
         // request() diasumsikan sudah mengembalikan array (decoded JSON)
-        $response = $this->request(
+        $response = $this->client->request(
             'POST',
             'Location',
             $payload
@@ -300,7 +300,7 @@ class MembuatStrukturOrganisasiDanLokasi {
 
     public function createLoc_Ruang206(array $payload) {
         // request() diasumsikan sudah mengembalikan array (decoded JSON)
-        $response = $this->request(
+        $response = $this->client->request(
             'POST',
             'Location',
             $payload
@@ -319,7 +319,7 @@ class MembuatStrukturOrganisasiDanLokasi {
 
     public function createLoc_Bed4(array $payload) {
         // request() diasumsikan sudah mengembalikan array (decoded JSON)
-        $response = $this->request(
+        $response = $this->client->request(
             'POST',
             'Location',
             $payload
@@ -339,7 +339,7 @@ class MembuatStrukturOrganisasiDanLokasi {
 
     public function createLoc_RuangVip1(array $payload) {
         // request() diasumsikan sudah mengembalikan array (decoded JSON)
-        $response = $this->request(
+        $response = $this->client->request(
             'POST',
             'Location',
             $payload
@@ -358,7 +358,7 @@ class MembuatStrukturOrganisasiDanLokasi {
 
     public function createLoc_RuangIcu(array $payload) {
         // request() diasumsikan sudah mengembalikan array (decoded JSON)
-        $response = $this->request(
+        $response = $this->client->request(
             'POST',
             'Location',
             $payload
@@ -377,7 +377,7 @@ class MembuatStrukturOrganisasiDanLokasi {
 
     public function createLoc_Bed1(array $payload) {
         // request() diasumsikan sudah mengembalikan array (decoded JSON)
-        $response = $this->request(
+        $response = $this->client->request(
             'POST',
             'Location',
             $payload
@@ -396,7 +396,7 @@ class MembuatStrukturOrganisasiDanLokasi {
 
     public function createLoc_InstalasiGawatDarurat(array $payload) {
         // request() diasumsikan sudah mengembalikan array (decoded JSON)
-        $response = $this->request(
+        $response = $this->client->request(
             'POST',
             'Location',
             $payload
@@ -415,7 +415,7 @@ class MembuatStrukturOrganisasiDanLokasi {
 
     public function createLoc_RuangOperasi(array $payload) {
         // request() diasumsikan sudah mengembalikan array (decoded JSON)
-        $response = $this->request(
+        $response = $this->client->request(
             'POST',
             'Location',
             $payload
@@ -434,7 +434,7 @@ class MembuatStrukturOrganisasiDanLokasi {
 
     public function createLoc_Farmasi(array $payload) {
         // request() diasumsikan sudah mengembalikan array (decoded JSON)
-        $response = $this->request(
+        $response = $this->client->request(
             'POST',
             'Location',
             $payload

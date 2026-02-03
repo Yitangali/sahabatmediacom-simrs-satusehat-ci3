@@ -1,0 +1,79 @@
+{
+   "resourceType": "Organization",
+   "active": true,
+   "identifier": [
+      {
+         "use": "official",
+         "system": "http://sys-ids.kemkes.go.id/organization/{{Org_id}}",
+         "value": "Farmasi"
+      }
+   ],
+   "type": [
+      {
+         "coding": [
+            {
+               "system": "http://terminology.hl7.org/CodeSystem/organization-type",
+               "code": "dept",
+               "display": "Hospital Department"
+            }
+         ]
+      }
+   ],
+   "name": "Koord Farmasi",
+   "telecom": [
+      {
+         "system": "phone",
+         "value": "+6221-14045",
+         "use": "work"
+      },
+      {
+         "system": "email",
+         "value": "SatSetSujudi@gmail.com",
+         "use": "work"
+      },
+      {
+         "system": "url",
+         "value": "www.SatSetHospital.com",
+         "use": "work"
+      }
+   ],
+   "address": [
+      {
+         "use": "work",
+         "type": "both",
+         "line": [
+            "Gd. Prof. Dr. Sujudi Lt.5, Jl. H.R. Rasuna Said Blok X5 Kav. 4-9 Kuningan"
+         ],
+         "city": "Jakarta",
+         "postalCode": "12950",
+         "country": "ID",
+         "extension": [
+            {
+               "url": "https://fhir.kemkes.go.id/r4/StructureDefinition/administrativeCode",
+               "extension": [
+                  {
+                     "url": "province",
+                     "valueCode": "31"
+                  },
+                  {
+                     "url": "city",
+                     "valueCode": "3174"
+                  },
+                  {
+                     "url": "district",
+                     "valueCode": "317402"
+                  },
+                  {
+                     "url": "village",
+                     "valueCode": "3174021003"
+                  }
+               ]
+            }
+         ]
+      }
+   ],
+   "partOf": {
+      "reference": "Organization/{{Divisi_Yanmed_id}}",
+      "display": "Farmasi"
+   }
+}

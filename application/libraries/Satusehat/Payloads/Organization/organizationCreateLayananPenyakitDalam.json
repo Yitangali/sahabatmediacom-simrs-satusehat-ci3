@@ -1,0 +1,79 @@
+{
+    "resourceType": "Organization",
+    "active": true,
+    "identifier": [
+        {
+            "use": "official",
+            "system": "http://sys-ids.kemkes.go.id/organization/{{Org_id}}",
+            "value": "Layanan Penyakit Dalam"
+        }
+    ],
+    "type": [
+        {
+            "coding": [
+                {
+                    "system": "http://terminology.hl7.org/CodeSystem/organization-type",
+                    "code": "dept",
+                    "display": "Hospital Department"
+                }
+            ]
+        }
+    ],
+    "name": "Layanan Penyakit Dalam, Pelayanan Rawat Inap, Divisi Pelayanan Medik",
+    "telecom": [
+        {
+            "system": "phone",
+            "value": "+6221-14045",
+            "use": "work"
+        },
+        {
+            "system": "email",
+            "value": "SatSetSujudi@gmail.com",
+            "use": "work"
+        },
+        {
+            "system": "url",
+            "value": "www.SatSetHospital.com",
+            "use": "work"
+        }
+    ],
+    "address": [
+        {
+            "use": "work",
+            "type": "both",
+            "line": [
+                "Gd. Prof. Dr. Sujudi Lt.5, Jl. H.R. Rasuna Said Blok X5 Kav. 4-9 Kuningan"
+            ],
+            "city": "Jakarta",
+            "postalCode": "12950",
+            "country": "ID",
+            "extension": [
+                {
+                    "url": "https://fhir.kemkes.go.id/r4/StructureDefinition/administrativeCode",
+                    "extension": [
+                        {
+                            "url": "province",
+                            "valueCode": "36"
+                        },
+                        {
+                            "url": "city",
+                            "valueCode": "3601"
+                        },
+                        {
+                            "url": "district",
+                            "valueCode": "360101"
+                        },
+                        {
+                            "url": "village",
+                            "valueCode": "36010101"
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "partOf": {
+        "reference": "Organization/{{Divisi_Yanmed_id}}",
+        "display": "Divisi Pelayanan Medik"
+    }
+}
