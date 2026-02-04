@@ -9,7 +9,7 @@
 		{
 			"use": "official",
 			"system": "https://fhir.kemkes.go.id/id/nik",
-			"value": "3212121007331111"
+			"value": "{{nik_pasien}}"
 		}
 	],
 	"active": true,

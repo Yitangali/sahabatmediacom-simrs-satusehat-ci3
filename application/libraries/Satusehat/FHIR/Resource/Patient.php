@@ -119,19 +119,19 @@ class Patient {
         ***************
     */
 
-    public function createPatientByNik($payloadPath) {
-        // Jika payload berupa path file JSON
-        if (is_string($payloadPath)) {
-            $payload = loadJsonPayload($payloadPath);
-        }
+    public function createPatientByNik($payload/*, $payloadPath*/) {
+        // // Jika payload berupa path file JSON
+        // if (is_string($payloadPath)) {
+        //     $payload = loadJsonPayload($payloadPath);
+        // }
 
-        // Validasi minimal
-        if (!isset($payload['resourceType']) || $payload['resourceType'] !== 'Patient') {
-            throw new SatusehatException(
-                'Payload bukan resource Patient',
-                $payload
-            );
-        }
+        // // Validasi minimal
+        // if (!isset($payload['resourceType']) || $payload['resourceType'] !== 'Patient') {
+        //     throw new SatusehatException(
+        //         'Payload bukan resource Patient',
+        //         $payload
+        //     );
+        // }
 
         return $this->client->request(
             'POST',
@@ -140,19 +140,19 @@ class Patient {
         );
     }
 
-    public function createPatientByNikIbu($payloadPath) {
+    public function createPatientByNikIbu($payload/*, $payloadPath*/) {
         // Jika payload berupa path file JSON
-        if (is_string($payloadPath)) {
-            $payload = loadJsonPayload($payloadPath);
-        }
+        // if (is_string($payloadPath)) {
+        //     $payload = loadJsonPayload($payloadPath);
+        // }
 
-        // Validasi minimal
-        if (!isset($payload['resourceType']) || $payload['resourceType'] !== 'Patient') {
-            throw new SatusehatException(
-                'Payload bukan resource Patient',
-                $payload
-            );
-        }
+        // // Validasi minimal
+        // if (!isset($payload['resourceType']) || $payload['resourceType'] !== 'Patient') {
+        //     throw new SatusehatException(
+        //         'Payload bukan resource Patient',
+        //         $payload
+        //     );
+        // }
 
         return $this->client->request(
             'POST',

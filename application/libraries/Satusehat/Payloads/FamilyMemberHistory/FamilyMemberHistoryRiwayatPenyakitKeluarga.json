@@ -1,0 +1,43 @@
+{
+   "resourceType": "FamilyMemberHistory",
+   "status": "completed",
+   "relationship": {
+      "coding": [
+         {
+            "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+            "code": "FAMMEMB",
+            "display": "family member"
+         }
+      ]
+   },
+   "deceasedBoolean": false,
+   "patient": {
+      "reference": "Patient/{{Patient_id}}",
+      "display": "{{Patient_Name}}"
+   },
+   "date": "2022-12-22T08:00:00+00:00",
+   "condition": [
+      {
+         "code": {
+            "coding": [
+               {
+                  "system": "http://snomed.info/sct",
+                  "code": "719763000",
+                  "display": "Maternal history of diabetes mellitus type 2"
+               }
+            ]
+         },
+         "outcome": {
+            "coding": [
+               {
+                  "system": "http://snomed.info/sct",
+                  "code": "315051004",
+                  "display": "Diabetes resolved"
+               }
+            ]
+         },
+         "contributedToDeath": false,
+         "onsetString": "Ibu pasien pernah menderita DM 10 tahun yll namun sudah dinyatakan sembuh"
+      }
+   ]
+}

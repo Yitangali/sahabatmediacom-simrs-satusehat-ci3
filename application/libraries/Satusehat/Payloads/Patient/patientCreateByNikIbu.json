@@ -9,7 +9,7 @@
 		{
 			"use": "official",
 			"system": "https://fhir.kemkes.go.id/id/nik-ibu",
-			"value": "9104025209000006"
+			"value": "{{nik_ibu}}"
 		}
 	],
 	"active": true,

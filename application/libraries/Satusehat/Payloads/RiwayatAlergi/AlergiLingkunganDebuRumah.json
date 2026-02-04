@@ -1,0 +1,53 @@
+{
+    "resourceType": "AllergyIntolerance",
+    "identifier": [
+        {
+            "system": "http://sys-ids.kemkes.go.id/allergy/{{Org_id}}",
+            "use": "official",
+            "value": "2024011234589"
+        }
+    ],
+    "clinicalStatus": {
+        "coding": [
+            {
+                "system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical",
+                "code": "active",
+                "display": "Active"
+            }
+        ]
+    },
+    "verificationStatus": {
+        "coding": [
+            {
+                "system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-verification",
+                "code": "confirmed",
+                "display": "Confirmed"
+            }
+        ]
+    },
+    "category": [
+        "environment"
+    ],
+    "code": {
+        "coding": [
+            {
+                "system": "http://snomed.info/sct",
+                "code": "128488006",
+                "display": "House dust"
+            }
+        ],
+        "text": "Debu Rumah"
+    },
+    "patient": {
+        "reference": "Patient/{{Patient_id}}",
+        "display": "{{Patient_Name}}"
+    },
+    "encounter": {
+        "reference": "Encounter/{{Encounter_id}}"
+    },
+    "recordedDate":  "2022-12-22T08:05:00+00:00",
+    "recorder": {
+        "reference": "Practitioner/{{Practitioner_id}}",
+        "display": "{{Practitioner_Name}}"
+    }
+}

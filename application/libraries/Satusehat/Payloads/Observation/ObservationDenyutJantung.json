@@ -1,0 +1,44 @@
+{
+    "resourceType": "Observation",
+    "status": "final",
+    "category": [
+        {
+            "coding": [
+                {
+                    "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                    "code": "vital-signs",
+                    "display": "Vital Signs"
+                }
+            ]
+        }
+    ],
+    "code": {
+        "coding": [
+            {
+                "system": "http://loinc.org",
+                "code": "8867-4",
+                "display": "Heart rate"
+            }
+        ]
+    },
+    "subject": {
+        "reference": "Patient/{{Patient_id}}"
+    },
+    "performer": [
+        {
+            "reference": "Practitioner/{{Practitioner_id}}"
+        }
+    ],
+    "encounter": {
+        "reference": "Encounter/{{Encounter_id}}",
+        "display": "Pemeriksaan Fisik Nadi {{Patient_Name}} di hari Selasa, 22 Desember 2022"
+    },
+    "effectiveDateTime": "2022-12-22T08:00:00+00:00",
+    "issued": "2022-12-22T08:00:00+00:00",
+    "valueQuantity": {
+        "value": 80,
+        "unit": "beats/minute",
+        "system": "http://unitsofmeasure.org",
+        "code": "/min"
+    }
+}

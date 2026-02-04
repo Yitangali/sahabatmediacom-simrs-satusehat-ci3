@@ -66,7 +66,7 @@ class Anamnesis {
 
     public function createCond_KeluhanUtama(array $payload) {
         // Diasumsikan request() sudah return array (decoded JSON)
-        $response = $this->request(
+        $response = $this->client->request(
             'POST',
             'Condition',
             $payload
@@ -84,7 +84,7 @@ class Anamnesis {
     }
 
 
-    public function createCond_KeluahanPenyerta(array $payload) {
+    public function createCond_KeluhanPenyerta(array $payload) {
         $response = $this->client->request(
             'POST',
             'Condition',

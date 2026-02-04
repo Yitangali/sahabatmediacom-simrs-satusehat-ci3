@@ -87,7 +87,7 @@ class PemeriksaanFisik {
         );
     }
 
-    public function createObservation_DenyutJantun($payload) {
+    public function createObservation_DenyutJantung($payload) {
         return $this->client->request(
             'POST',
             'Observation',

@@ -1,0 +1,53 @@
+{
+    "resourceType": "Condition",
+    "clinicalStatus": {
+        "coding": [
+            {
+                "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+                "code": "active",
+                "display": "Active"
+            }
+        ]
+    },
+    "category": [
+        {
+            "coding": [
+                {
+                    "system": "http://terminology.kemkes.go.id",
+                    "code": "previous-condition",
+                    "display": "Previous Condition"
+                }
+            ]
+        }
+    ],
+    "code": {
+        "coding": [
+            {
+                "system": "http://snomed.info/sct",
+                "code": "472969004",
+                "display": "History of diabetes mellitus type 2"
+            }
+        ]
+    },
+    "subject": {
+        "reference": "Patient/{{Patient_id}}",
+        "display": "{{Patient_Name}}"
+    },
+    "encounter": {
+        "reference": "Encounter/{{Encounter_id}}"
+    },
+    "onsetPeriod": {
+        "start": "2020-01-31T00:00:00+00:00",
+        "end": "2021-06-04T05:40:00+00:00"
+    },
+    "recordedDate": "2022-12-22T08:03:00+00:00",
+    "recorder": {
+        "reference": "Practitioner/{{Practitioner_id}}",
+        "display": "{{Practitioner_Name}}"
+    },
+    "note": [
+        {
+            "text": "Pasien menderita DM sejak 2 tahun yang lalu"
+        }
+    ]
+}
