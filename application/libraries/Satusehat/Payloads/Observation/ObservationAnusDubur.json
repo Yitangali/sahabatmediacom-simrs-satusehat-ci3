@@ -1,0 +1,48 @@
+{
+    "resourceType": "Observation",
+    "status": "final",
+    "category": [
+        {
+            "coding": [
+                {
+                    "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                    "code": "exam",
+                    "display": "Exam"
+                }
+            ]
+        }
+    ],
+    "code": {
+        "coding": [
+            {
+                "system": "http://loinc.org",
+                "code": "11388-6",
+                "display": "Physical findings of Buttocks Narrative"
+            }
+        ]
+    },
+    "bodySite": {
+        "coding": [
+            {
+                "system": "http://snomed.info/sct",
+                "code": "53505006",
+                "display": "Anal structure"
+            }
+        ]
+    },
+    "subject": {
+        "reference": "Patient/{{Patient_id}}",
+        "display": "{{Patient_Name}}"
+    },
+    "encounter": {
+        "reference": "Encounter/{{Encounter_id}}"
+    },
+    "effectiveDateTime": "2022-12-22T08:00:00+00:00",
+    "issued": "2022-12-22T08:00:00+00:00",
+    "performer": [
+        {
+            "reference": "Practitioner/{{Practitioner_id}}"
+        }
+    ],
+    "valueString" : "Anus dalam batas normal, Tidak ada tanda inflamasi"
+}

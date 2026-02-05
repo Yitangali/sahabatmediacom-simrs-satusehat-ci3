@@ -1,0 +1,48 @@
+{
+    "resourceType": "Observation",
+    "status": "final",
+    "category": [
+        {
+            "coding": [
+                {
+                    "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                    "code": "exam",
+                    "display": "Exam"
+                }
+            ]
+        }
+    ],
+    "code": {
+        "coding": [
+            {
+                "system": "http://loinc.org",
+                "code": "11397-7",
+                "display": "Physical findings of Foot Narrative"
+            }
+        ]
+    },
+    "bodySite": {
+        "coding": [
+            {
+                "system": "http://snomed.info/sct",
+                "code": "29707007",
+                "display": "Toe structure"
+            }
+        ]
+    },
+    "subject": {
+        "reference": "Patient/{{Patient_id}}",
+        "display": "{{Patient_Name}}"
+    },
+    "encounter": {
+        "reference": "Encounter/{{Encounter_id}}"
+    },
+    "effectiveDateTime": "2022-12-22T08:00:00+00:00",
+    "issued": "2022-12-22T08:00:00+00:00",
+    "performer": [
+        {
+            "reference": "Practitioner/{{Practitioner_id}}"
+        }
+    ],
+    "valueString" : "Jari Kaki dalam batas normal, Tidak ada krepitasi, Tidak ada tanda inflamasi"
+}

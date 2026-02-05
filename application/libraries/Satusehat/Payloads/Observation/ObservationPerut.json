@@ -1,0 +1,39 @@
+{
+    "resourceType": "Observation",
+    "status": "final",
+    "category": [
+        {
+            "coding": [
+                {
+                    "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                    "code": "exam",
+                    "display": "Exam"
+                }
+            ]
+        }
+    ],
+    "code": {
+        "coding": [
+            {
+                "system": "http://loinc.org",
+                "code": "10191-5",
+                "display": "Physical findings of Abdomen Narrative"
+            }
+        ]
+    },
+    "subject": {
+        "reference": "Patient/{{Patient_id}}",
+        "display": "{{Patient_Name}}"
+    },
+    "encounter": {
+        "reference": "Encounter/{{Encounter_id}}"
+    },
+    "effectiveDateTime": "2022-12-22T08:00:00+00:00",
+    "issued": "2022-12-22T08:00:00+00:00",
+    "performer": [
+        {
+            "reference": "Practitioner/{{Practitioner_id}}"
+        }
+    ],
+    "valueString" : "Gerakan dinding perut saat ekspirasi dan insipirasi dalam batas normal, Pada auskultasi suara peristaltik usus dalam batas normal, Pada perkusi terdapat timpani seluruh lapang perut"
+}
