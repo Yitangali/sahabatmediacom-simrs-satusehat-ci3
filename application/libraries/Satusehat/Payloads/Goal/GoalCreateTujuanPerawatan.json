@@ -1,0 +1,74 @@
+{
+   "resourceType": "Goal",
+   "lifecycleStatus": "planned",
+   "category": [
+      {
+         "coding": [
+            {
+               "system": "http://terminology.hl7.org/CodeSystem/goal-category",
+               "code": "nursing",
+               "display": "Nursing"
+            }
+         ]
+      }
+   ],
+   "description": {
+      "text": "Perawatan dilakukan untuk mengatasi gejala wajah membengkak"
+   },
+   "subject": {
+      "reference": "Patient/{{Patient_id}}"
+   },
+   "target": [
+      {
+         "measure": {
+            "coding": [
+               {
+                  "system": "http://loinc.org",
+                  "code": "2161-8",
+                  "display": "Creatinine [Mass/volume] in Urine"
+               }
+            ]
+         },
+         "detailCodeableConcept": {
+            "coding": [
+               {
+                  "system": "http://snomed.info/sct",
+                  "code": "17621005",
+                  "display": "Normal"
+               }
+            ]
+         },
+         "dueDate": "2022-12-30"
+      },
+      {
+         "measure": {
+            "coding": [
+               {
+                  "system": "http://loinc.org",
+                  "code": "2093-3",
+                  "display": "Cholesterol [Mass/volume] in Serum or Plasma"
+               }
+            ]
+         },
+         "detailCodeableConcept": {
+            "coding": [
+               {
+                  "system": "http://snomed.info/sct",
+                  "code": "17621005",
+                  "display": "Normal"
+               }
+            ]
+         },
+         "dueDate": "2022-12-30"
+      }
+   ],
+   "statusDate": "2022-12-30",
+   "expressedBy": {
+      "reference": "Practitioner/{{Practitioner_id}}"
+   },
+   "addresses": [
+      {
+         "reference": "Condition/{{Condition_KeluhanUtama}}"
+      }
+   ]
+}

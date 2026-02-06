@@ -66,7 +66,7 @@ class PemeriksaanFungsional {
     public function createObservation_StatusPsikologis($payload) {
         return $this->client->request(
             'POST',
-            'Obsevation',
+            'Observation',
             $payload
         );
     }
@@ -74,7 +74,7 @@ class PemeriksaanFungsional {
     public function createObservation_SkorAdl($payload) {
         return $this->client->request(
             'POST',
-            'Obsevation',
+            'Observation',
             $payload
         );
     }

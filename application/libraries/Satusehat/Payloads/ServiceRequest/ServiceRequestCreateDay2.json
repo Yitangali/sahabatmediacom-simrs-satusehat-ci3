@@ -1,0 +1,72 @@
+{
+    "resourceType": "ServiceRequest",
+    "identifier": [
+        {
+            "system": "http://sys-ids.kemkes.go.id/servicerequest/{{Org_id}}",
+            "value": "00001B"
+        }
+    ],
+    "status": "active",
+    "intent": "original-order",
+    "priority": "routine",
+    "category": [
+        {
+            "coding": [
+                {
+                    "system": "http://snomed.info/sct",
+                    "code": "108252007",
+                    "display": "Laboratory procedure"
+                }
+            ]
+        }
+    ],
+    "code": {
+        "coding": [
+            {
+                "system": "http://loinc.org",
+                "code": "2161-8",
+                "display": "Creatinine [Mass/volume] in Urine"
+            },
+             {
+                "system": "http://terminology.kemkes.go.id/CodeSystem/kptl",
+                "code": "30691.SP050",
+                "display": "Kreatinin, Urin"
+            }
+        ],
+        "text": "Kreatinin dalam Urin"
+    },
+    "subject": {
+        "reference": "Patient/{{Patient_id}}"
+    },
+    "encounter": {
+        "reference": "Encounter/{{Encounter_id}}",
+        "display": "Permintaan Kreatinin dalam Urin Sabtu, 27 Desember 2022 pukul 09:30 WIB"
+    },
+    "occurrenceDateTime": "2022-12-27T16:30:00+00:00",
+    "authoredOn": "2022-12-26T14:00:00+00:00",
+    "requester": {
+        "reference": "Practitioner/{{Practitioner_id}}",
+        "display": "{{Practitioner_Name}}"
+    },
+    "performer": [
+        {
+            "reference": "Practitioner/{{Practitioner_Lab_id}}",
+            "display": "{{Practitioner_Lab_Nama}}"
+        }
+    ],
+    "reasonReference": [
+        {
+            "reference": "Condition/{{Condition_KeluhanUtama_id}}"
+        }
+    ],
+    "note": [
+        {
+            "text": "Pasien tidak berpuasa terlebih dahulu"
+        }
+    ],
+    "supportingInfo": [
+        {
+            "reference": "Procedure/{{Procedure_StatusPuasa_Day2_id}}"
+        }
+    ]
+}

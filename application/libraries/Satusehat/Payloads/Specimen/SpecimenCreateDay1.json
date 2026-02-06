@@ -1,0 +1,105 @@
+{
+   "resourceType": "Specimen",
+   "identifier": [
+      {
+         "system": "http://sys-ids.kemkes.go.id/specimen/{{Org_id}}",
+         "value": "P20240001",
+         "assigner": {
+            "reference": "Organization/{{Org_id}}"
+         }
+      }
+   ],
+   "status": "available",
+   "type": {
+      "coding": [
+         {
+            "system": "http://snomed.info/sct",
+            "code": "119297000",
+            "display": "Blood specimen"
+         }
+      ]
+   },
+   "condition": [
+      {
+         "text": "Kondisi Spesimen Baik"
+      }
+   ],
+   "collection": {
+      "method": {
+         "coding": [
+            {
+               "system": "http://snomed.info/sct",
+               "code": "82078001",
+               "display": "Collection of blood specimen for laboratory"
+            }
+         ]
+      },
+      "collectedDateTime": "2022-12-26T15:00:00+00:00",
+      "quantity": {
+         "value": 6,
+         "unit": "mL"
+      },
+      "collector": {
+         "reference": "Practitioner/{{Practitioner_Lab_id}}",
+         "display": "{{Practitioner_Lab_Nama}}"
+      },
+      "fastingStatusCodeableConcept": {
+         "coding": [
+            {
+               "system": "http://terminology.hl7.org/CodeSystem/v2-0916",
+               "code": "NF",
+               "display": "The patient indicated they did not fast prior to the procedure."
+            }
+         ]
+      }
+   },
+   "subject": {
+      "reference": "Patient/{{Patient_id}}",
+      "display": "{{Patient_Name}}"
+   },
+   "request": [
+      {
+         "reference": "ServiceRequest/{{ServiceRequest_LabDay1_id}}"
+      }
+   ],
+   "extension": [
+      {
+         "url": "https://fhir.kemkes.go.id/r4/StructureDefinition/TransportedTime",
+         "valueDateTime": "2022-12-26T15:15:00+00:00"
+      },
+      {
+         "url": "https://fhir.kemkes.go.id/r4/StructureDefinition/TransportedPerson",
+         "valueContactDetail": {
+            "name": "Burhan",
+            "telecom": [
+               {
+                  "system": "phone",
+                  "value": "021-5375162"
+               }
+            ]
+         }
+      },
+      {
+         "url": "https://fhir.kemkes.go.id/r4/StructureDefinition/ReceivedPerson",
+         "valueReference": {
+            "reference": "Practitioner/{{Practitioner_Received_id}}",
+            "display": "{{Practitioner_Received_Nama}}"
+         }
+      }
+   ],
+   "receivedTime": "2022-12-26T15:25:00+00:00",
+   "processing": [
+      {
+         "procedure": {
+            "coding": [
+               {
+                  "system": "http://snomed.info/sct",
+                  "code": "9265001",
+                  "display": "Specimen processing"
+               }
+            ]
+         },
+         "timeDateTime": "2022-12-27T16:30:00+00:00"
+      }
+   ]
+}

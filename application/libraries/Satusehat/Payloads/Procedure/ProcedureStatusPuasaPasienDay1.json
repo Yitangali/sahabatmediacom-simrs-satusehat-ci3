@@ -1,0 +1,46 @@
+{
+   "resourceType": "Procedure",
+   "status": "not-done",
+   "category": {
+      "coding": [
+         {
+            "system": "http://terminology.kemkes.go.id",
+            "code": "TK000028",
+            "display": "Diagnostic procedure"
+         }
+      ]
+   },
+   "code": {
+      "coding": [
+         {
+            "system": "http://snomed.info/sct",
+            "code": "792805006",
+            "display": "Fasting"
+         }
+      ]
+   },
+   "subject": {
+      "reference": "Patient/{{Patient_id}}",
+      "display": "{{Patient_Name}}"
+   },
+   "encounter": {
+      "reference": "Encounter/{{Encounter_id}}"
+   },
+   "performedPeriod": {
+      "start": "2022-12-26T00:00:00+00:00",
+      "end": "2022-12-26T00:00:00+00:00"
+   },
+   "performer": [
+      {
+         "actor": {
+            "reference": "Practitioner/{{Practitioner_id}}",
+            "display": "{{Practitioner_Name}}"
+         }
+      }
+   ],
+   "note": [
+      {
+         "text": "Prosedur Puasa tidak dilakukan Pasien"
+      }
+   ]
+}

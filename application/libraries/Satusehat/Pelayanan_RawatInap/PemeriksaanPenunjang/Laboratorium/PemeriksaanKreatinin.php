@@ -101,7 +101,7 @@ class PemeriksaanKreatinin {
     }
 
 
-    public function createSpecimen_Day2(array $payload) {
+    public function createSpecimen_Day2($payload) {
         $response = $this->client->request(
             'POST',
             'Specimen',

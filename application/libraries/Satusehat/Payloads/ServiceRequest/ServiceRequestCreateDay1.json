@@ -1,0 +1,72 @@
+{
+    "resourceType": "ServiceRequest",
+    "identifier": [
+        {
+            "system": "http://sys-ids.kemkes.go.id/servicerequest/{{Org_id}}",
+            "value": "00001A"
+        }
+    ],
+    "status": "active",
+    "intent": "original-order",
+    "priority": "routine",
+    "category": [
+        {
+            "coding": [
+                {
+                    "system": "http://snomed.info/sct",
+                    "code": "108252007",
+                    "display": "Laboratory procedure"
+                }
+            ]
+        }
+    ],
+    "code": {
+        "coding": [
+            {
+                "system": "http://loinc.org",
+                "code": "2093-3",
+                "display": "Cholesterol [Mass/volume] in Serum or Plasma"
+            },
+            {
+                "system": "http://terminology.kemkes.go.id/CodeSystem/kptl",
+                "code": "30326",
+                "display": "CHOLESTEROL TOTAL/KOLESTEROL TOTAL"
+            }
+        ],
+        "text": "Kolesterol Total"
+    },
+    "subject": {
+        "reference": "Patient/{{Patient_id}}"
+    },
+    "encounter": {
+        "reference": "Encounter/{{Encounter_id}}",
+        "display": "Permintaan Pemeriksaan Kolesterol Total Jum'at, 26 Desember 2022 pukul 09:30 WIB"
+    },
+    "occurrenceDateTime": "2022-12-26T16:30:00+00:00",
+    "authoredOn": "2022-12-25T14:00:00+00:00",
+    "requester": {
+        "reference": "Practitioner/{{Practitioner_id}}",
+        "display": "{{Practitioner_Name}}"
+    },
+    "performer": [
+        {
+            "reference": "Practitioner/{{Practitioner_Lab_id}}",
+            "display": "{{Practitioner_Lab_Nama}}"
+        }
+    ],
+    "reasonReference": [
+        {
+            "reference": "Condition/{{Condition_KeluhanUtama_id}}"
+        }
+    ],
+    "note": [
+        {
+            "text": "Pasien diminta untuk berpuasa terlebih dahulu"
+        }
+    ],
+    "supportingInfo": [
+        {
+            "reference": "Procedure/{{Procedure_StatusPuasa_Day1_id}}"
+        }
+    ]
+}

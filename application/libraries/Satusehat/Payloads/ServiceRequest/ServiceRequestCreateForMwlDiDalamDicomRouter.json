@@ -1,0 +1,143 @@
+{
+   "resourceType": "ServiceRequest",
+   "identifier": [
+      {
+         "system": "http://sys-ids.kemkes.go.id/servicerequest/{{Org_id}}",
+         "value": "00001B"
+      },
+      {
+         "use": "usual",
+         "type": {
+            "coding": [
+               {
+                  "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                  "code": "ACSN"
+               }
+            ]
+         },
+         "system": "http://sys-ids.kemkes.go.id/acsn/{{Org_id}}",
+         "value": "{{ACSN}}"
+      }
+   ],
+   "contained": [
+      {
+         "resourceType": "Patient",
+         "id": "{{Patient_id}}",
+         "identifier": [
+            {
+               "system": "http://sys-ids.kemkes.go.id/mrn/{{Org_id}}",
+               "value": "{{mrnPrivate}}"
+            }
+         ],
+         "active": true,
+         "name": [
+            {
+               "use": "official",
+               "text": "{{Patient_Name}}"
+            }
+         ],
+         "gender": "female",
+         "birthDate": "1980-11-19",
+         "multipleBirthInteger": 1
+      }
+   ],
+   "status": "active",
+   "intent": "original-order",
+   "priority": "routine",
+   "category": [
+      {
+         "coding": [
+            {
+               "system": "http://snomed.info/sct",
+               "code": "363679005",
+               "display": "Imaging"
+            }
+         ]
+      }
+   ],
+   "code": {
+      "coding": [
+         {
+            "system": "http://loinc.org",
+            "code": "38036-0",
+            "display": "US Kidney"
+         },
+         {
+            "system": "http://terminology.kemkes.go.id/CodeSystem/kptl",
+            "code": "31537",
+            "display": "USG Ginjal"
+         }
+      ],
+      "text": "Pemeriksaan USG Ginjal"
+   },
+   "orderDetail": [
+      {
+         "coding": [
+            {
+               "system": "http://dicom.nema.org/resources/ontology/DCM",
+               "code": "US"
+            }
+         ],
+         "text": "Modality Code: US"
+      },
+      {
+         "coding": [
+            {
+               "system": "http://sys-ids.kemkes.go.id/ae-title",
+               "display": "US0001"
+            }
+         ]
+      }
+   ],
+   "subject": {
+      "reference": "Patient/{{Patient_id}}"
+   },
+   "encounter": {
+      "reference": "Encounter/{{Encounter_id}}"
+   },
+   "occurrenceDateTime": "2022-12-26T16:30:27+00:00",
+   "authoredOn": "2022-12-25T19:30:27+00:00",
+   "requester": {
+      "reference": "Patient/{{Patient_id}}",
+      "display": "{{Patient_Name}}"
+   },
+   "performer": [
+      {
+         "reference": "Practitioner/{{Practitioner_Rad_id}}",
+         "display": "{{Practitioner_Rad_Nama}}"
+      }
+   ],
+   "bodySite": [
+      {
+         "coding": [
+            {
+               "system": "http://snomed.info/sct",
+               "code": "64033007",
+               "display": "Kidney structure"
+            }
+         ]
+      }
+   ],
+   "reasonCode": [
+      {
+         "coding": [
+            {
+               "system": "http://hl7.org/fhir/sid/icd-10",
+               "code": "N18.5",
+               "display": "Chronic kidney disease, stage 5"
+            }
+         ]
+      }
+   ],
+   "supportingInfo": [
+      {
+         "reference": "Observation/{{Observation_Rad_id}}"
+      },
+      {
+         "reference": "AllergyIntolerance/{{AllergyIntolerance_Rad_id}}"
+      },
+      {
+         "reference": "Procedure/{{Procedure_Rad_id}}"
+      }
+   ]
+}

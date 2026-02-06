@@ -63,7 +63,7 @@ class RencanaRawatPasien {
                 *** *** *** *** //                                                                    // *** *** *** ***
             *** *** *** *** *** //////////////////////////////////////////////////////////////////////// *** *** *** *** ***   */
 
-    public function createCarePlan_RencanaRawatPasien(array $payload) {
+    public function createCarePlan_RencanaRawatPasien($payload) {
         $response = $this->client->request(
             'POST',
             'CarePlan',

@@ -1,0 +1,26 @@
+{
+   "resourceType": "ClinicalImpression",
+   "status": "completed",
+   "code": {
+      "coding": [
+         {
+            "system": "http://snomed.info/sct",
+            "code": "312850006",
+            "display": "History of disorder"
+         }
+      ]
+   },
+   "subject": {
+      "reference": "Patient/{{Patient_id}}",
+      "display": "{{Patient_Name}}"
+   },
+   "encounter": {
+      "reference": "Encounter/{{Encounter_id}}"
+   },
+   "effectiveDateTime": "2022-12-22T08:11:00+00:00",
+   "date": "2022-12-22T08:11:00+00:00",
+   "assessor": {
+      "reference": "Practitioner/{{Practitioner_id}}"
+   },
+   "summary": "Pasien datang dengan keluhan utama demam wajah membengkak disertai sakit kepala. Pasien memiliki riwayat diabetes mellitus tipe 2 dan dahulu pasien pernah menderita asma. Ibu pasien memiliki riwayat diabetes mellitus tipe 2."
+}
