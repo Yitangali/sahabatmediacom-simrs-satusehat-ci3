@@ -1,0 +1,61 @@
+{
+   "resourceType": "Condition",
+   "clinicalStatus": {
+      "coding": [
+         {
+            "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+            "code": "active",
+            "display": "Active"
+         }
+      ]
+   },
+   "category": [
+      {
+         "coding": [
+            {
+               "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+               "code": "encounter-diagnosis",
+               "display": "Encounter Diagnosis"
+            }
+         ]
+      }
+   ],
+   "code": {
+      "coding": [
+         {
+            "system": "http://hl7.org/fhir/sid/icd-10",
+            "code": "N18.5",
+            "display": "Chronic kidney disease, stage 5"
+         },
+         {
+            "system": "http://snomed.info/sct",
+            "code": "433146000",
+            "display": "Chronic kidney disease stage 5"
+         }
+      ],
+      "text":"Diagnosis primer CKD Stage 5"
+   },
+   "subject": {
+      "reference": "Patient/{{Patient_id}}",
+      "display": "{{Patient_Name}}"
+   },
+   "encounter": {
+      "reference": "Encounter/{{Encounter_id}}"
+   },
+   "onsetDateTime": "2022-12-22T08:00:00+00:00",
+   "recordedDate": "2022-12-22T08:00:00+00:00",
+   "stage": [
+      {
+         "assessment": [
+            {
+               "reference": "ClinicalImpression/{{Rasional_Klinis}}"
+            }
+         ]
+      }
+   ],
+   "note": [
+      {
+         "text": "Pasien mengalami Gagal Ginjal Stage 5"
+      }
+   ]
+}

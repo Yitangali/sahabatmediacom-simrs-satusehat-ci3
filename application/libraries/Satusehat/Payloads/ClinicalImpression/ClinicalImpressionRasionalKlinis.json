@@ -1,0 +1,49 @@
+{
+   "resourceType": "ClinicalImpression",
+   "status": "completed",
+   "code": {
+      "coding": [
+         {
+            "system": "http://terminology.kemkes.go.id",
+            "code": "TK000056",
+            "display": "Rasional Klinis"
+         }
+      ]
+   },
+   "subject": {
+      "reference": "Patient/{{Patient_id}}",
+      "display": "{{Patient_Name}}"
+   },
+   "encounter": {
+      "reference": "Encounter/{{Encounter_id}}"
+   },
+   "effectiveDateTime": "2022-12-28T22:45:10+00:00",
+   "date": "2022-12-28T22:45:10+00:00",
+   "assessor": {
+      "reference": "Practitioner/{{Practitioner_id}}"
+   },
+   "investigation": [
+      {
+         "code": {
+            "coding": [
+               {
+                  "system": "http://snomed.info/sct",
+                  "code": "271336007",
+                  "display": "Examination / signs"
+               }
+            ]
+         },
+         "item": [
+            {
+               "reference": "Observation/{{Observation_Kuantitatif}}",
+               "display": "Hasil Pemeriksaan Penunjang Laboratorium"
+            },
+            {
+               "reference": "Observation/{{Observation_RadResult_id}}",
+               "display": "Hasil Pemeriksaan Penunjang Radiologi"
+            }
+         ]
+      }
+   ],
+   "summary": "Pasien datang dengan keluhan utama wajah membengkak disertai sakit kepala. Hasil pemeriksaan penunjang mengarah pada kemungkinan pasien mengalami gangguan gagal ginjal stadium 5"
+}

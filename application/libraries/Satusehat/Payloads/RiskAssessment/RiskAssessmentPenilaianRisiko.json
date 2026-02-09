@@ -1,0 +1,45 @@
+{
+   "resourceType": "RiskAssessment",
+   "status": "final",
+   "code": {
+      "coding": [
+         {
+            "system": "http://snomed.info/sct",
+            "code": "709510001",
+            "display": "Assessment of risk for disease"
+         }
+      ]
+   },
+   "subject": {
+      "reference": "Patient/{{Patient_id}}"
+   },
+   "encounter": {
+      "reference": "Encounter/{{Encounter_id}}"
+   },
+   "performer": {
+      "reference": "Practitioner/{{Practitioner_id}}"
+   },
+   "condition": {
+      "reference": "Condition/{{Diagnosis_Primer}}"
+   },
+   "reasonReference": [
+      {
+         "reference": "Condition/{{Condition_KeluhanUtama}}"
+      }
+   ],
+   "prediction": [
+      {
+         "outcome": {
+            "coding": [
+               {
+                  "system": "http://snomed.info/sct",
+                  "code": "714153000",
+                  "display": "Chronic kidney disease stage 5 with transplant"
+               }
+            ]
+         },
+         "probabilityDecimal": 0.5
+      }
+   ],
+   "mitigation": "Perlu dilakukan hemodialisis untuk untuk membuang zat-zat sisa, kelebihan cairan, dan menjaga keseimbangan elektrolit dalam tubuh"
+}

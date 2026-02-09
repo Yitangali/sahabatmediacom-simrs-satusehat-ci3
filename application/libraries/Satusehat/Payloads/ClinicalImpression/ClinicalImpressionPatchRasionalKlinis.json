@@ -1,0 +1,14 @@
+[
+    {
+        "op": "add",
+        "path": "/problem",
+        "value": [
+            {
+                "reference": "Condition/{{Diagnosis_Primer}}"
+            },
+            {
+                "reference": "Condition/{{Diagnosis_Sekunder}}"
+            }
+        ]
+    }
+]
