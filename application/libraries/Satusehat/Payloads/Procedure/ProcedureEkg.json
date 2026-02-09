@@ -1,0 +1,63 @@
+{
+   "resourceType": "Procedure",
+   "basedOn": [
+      {
+         "reference": "ServiceRequest/{{SR_EKG}}"
+      }
+   ],
+   "status": "completed",
+   "category": {
+      "coding": [
+         {
+            "system": "http://snomed.info/sct",
+            "code": "103693007",
+            "display": "Diagnostic procedure"
+         }
+      ],
+      "text": "Prosedur Diagnostik"
+   },
+   "code": {
+      "coding": [
+         {
+            "system": "http://hl7.org/fhir/sid/icd-9-cm",
+            "code": "89.52",
+            "display": "Electrocardiogram"
+         },
+         {
+            "system": "http://snomed.info/sct",
+            "code": "29303009",
+            "display": "Electrocardiographic procedure"
+         }
+      ]
+   },
+   "subject": {
+      "reference": "Patient/{{Patient_id}}",
+      "display": "{{Patient_Name}}"
+   },
+   "encounter": {
+      "reference": "Encounter/{{Encounter_id}}"
+   },
+   "performedPeriod": {
+      "start": "2022-12-25T18:00:00+00:00",
+      "end": "2022-12-25T19:27:00+00:00"
+   },
+   "performer": [
+      {
+         "actor": {
+            "reference": "Practitioner/{{Practitioner_id}}",
+            "display": "{{Practitioner_Name}}"
+         }
+      }
+   ],
+   "usedCode": [
+      {
+         "coding": [
+            {
+               "system": "http://sys-ids.kemkes.go.id/kfa",
+               "code": "33999999",
+               "display": "Alat EKG merk X"
+            }
+         ]
+      }
+   ]
+}

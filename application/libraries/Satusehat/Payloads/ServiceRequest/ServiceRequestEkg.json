@@ -1,0 +1,66 @@
+{
+   "resourceType": "ServiceRequest",
+   "identifier": [
+      {
+         "system": "http://sys-ids.kemkes.go.id/servicerequest/{{Org_id}}",
+         "value": "101010"
+      }
+   ],
+   "status": "active",
+   "intent": "original-order",
+   "priority": "routine",
+   "category": [
+      {
+         "coding": [
+            {
+               "system": "http://terminology.kemkes.go.id",
+               "code": "TK000028",
+               "display": "Diagnostic procedure"
+            }
+         ]
+      }
+   ],
+   "code": {
+      "coding": [
+         {
+            "system": "http://hl7.org/fhir/sid/icd-9-cm",
+            "code": "89.52",
+            "display": "Electrocardiogram"
+         },
+         {
+            "system": "http://terminology.kemkes.go.id/CodeSystem/kptl",
+            "code": "13396.PC002",
+            "display": "Perekaman EKG pasien dewasa"
+         }
+      ]
+   },
+   "subject": {
+      "reference": "Patient/{{Patient_id}}"
+   },
+   "encounter": {
+      "reference": "Encounter/{{Encounter_id}}"
+   },
+   "occurrenceDateTime": "2022-12-25T18:00:00+00:00",
+   "authoredOn": "2022-12-25T17:00:00+00:00",
+   "requester": {
+      "reference": "Practitioner/{{Practitioner_id}}",
+      "display": "{{Practitioner_Name}}"
+   },
+   "performer": [
+      {
+         "reference": "Practitioner/{{Practitioner_id}}",
+         "display": "{{Practitioner_Name}}"
+      }
+   ],
+   "reasonCode": [
+      {
+         "coding": [
+            {
+               "system": "http://hl7.org/fhir/sid/icd-10",
+               "code": "N18.5",
+               "display": "Chronic kidney disease, stage 5"
+            }
+         ]
+      }
+   ]
+}
