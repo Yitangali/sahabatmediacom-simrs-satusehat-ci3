@@ -1,0 +1,119 @@
+{
+    "resourceType": "MedicationDispense",
+    "identifier": [
+        {
+            "system": "http://sys-ids.kemkes.go.id/prescription/{{Org_id}}",
+            "use": "official",
+            "value": "123456789"
+        },
+        {
+            "system": "http://sys-ids.kemkes.go.id/prescription-item/{{Org_id}}",
+            "use": "official",
+            "value": "123456788-3"
+        }
+    ],
+    "status": "completed",
+    "category": {
+        "coding": [
+            {
+                "system": "http://terminology.hl7.org/fhir/CodeSystem/medicationdispense-category",
+                "code": "inpatient",
+                "display": "Inpatient"
+            }
+        ]
+    },
+    "medicationReference": {
+        "reference": "Medication/{{Medication_ForDispense_InfusDay1}}",
+        "display": "Ringer Lactate (NATURA LABORATORIA PRIMA, 500 mL)"
+    },
+    "subject": {
+        "reference": "Patient/{{Patient_id}}",
+        "display": "{{Patient_Name}}"
+    },
+    "context": {
+        "reference": "Encounter/{{Encounter_id}}"
+    },
+    "performer": [
+        {
+            "actor": {
+                "reference": "Practitioner/{{Practitioner_Apoteker_id}}",
+                "display": "{{Practitioner_Apoteker_Nama}}"
+            }
+        }
+    ],
+    "location": {
+        "reference": "Location/{{Location_Ruang210_Bed2_id}}",
+        "display": "Bed 2, Ruang 210, Bangsal Rawat Inap Kelas 1, Layanan Penyakit Dalam, Lantai 2, Gedung Utama"
+    },
+    "authorizingPrescription": [
+        {
+            "reference": "MedicationRequest/{{MedicationRequest_InfusDay1}}"
+        }
+    ],
+    "quantity": {
+        "value": 1,
+        "unit": "Bottle - unit of product usage",
+        "system": "http://snomed.info/sct",
+        "code": "419672006"
+    },
+    "daysSupply": {
+        "value": 8,
+        "unit": "hour",
+        "system": "http://unitsofmeasure.org",
+        "code": "h"
+    },
+    "whenPrepared": "2022-12-25T14:00:00+00:00",
+    "whenHandedOver": "2022-12-25T14:30:00+00:00",
+    "dosageInstruction": [
+        {
+            "sequence": 1,
+            "patientInstruction": "1 botol per 8 jam",
+            "additionalInstruction":[
+                {
+                    "coding": [
+                        {
+                            "system": "http://snomed.info/sct",
+                            "code": "421769005",
+                            "display": "Follow directions"
+                        }
+                    ]
+                }
+            ],
+            "timing": {
+                "repeat": {
+                    "frequency": 1,
+                    "period": 8,
+                    "periodUnit": "h"
+                }
+            },
+            "route": {
+                "coding": [
+                    {
+                        "system": "http://www.whocc.no/atc",
+                        "code": "P",
+                        "display": "Parenteral"
+                    }
+                ]
+            },
+            "doseAndRate": [
+                {
+                    "type": {
+                        "coding": [
+                            {
+                                "system": "http://terminology.hl7.org/CodeSystem/dose-rate-type",
+                                "code": "ordered",
+                                "display": "Ordered"
+                            }
+                        ]
+                    },
+                    "doseQuantity": {
+                        "value": 500,
+                        "unit" : "mL",
+                        "code": "mL",
+                        "system": "http://unitsofmeasure.org"
+                    }
+                }
+            ]
+        }
+    ]
+}
