@@ -125,7 +125,7 @@ class PengeluaranObat {
         );
     }
 
-    public function createMedicationDispense_furosemide($payload) {
+    public function createMedicationDispense_InfusRingerLaktat($payload) {
         return $this->client->request(
             'POST',
             'MedicationDispense',

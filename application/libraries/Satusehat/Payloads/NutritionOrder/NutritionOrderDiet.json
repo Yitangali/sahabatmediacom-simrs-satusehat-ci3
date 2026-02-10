@@ -1,0 +1,58 @@
+{
+    "resourceType": "NutritionOrder",
+    "status": "active",
+    "intent": "proposal",
+    "patient": {
+        "reference": "Patient/{{Patient_id}}"
+    },
+    "encounter": {
+        "reference": "Encounter/{{Encounter_id}}"
+    },
+    "dateTime": "2022-12-29T10:24:00+00:00",
+    "orderer": {
+        "reference": "Practitioner/{{Practitioner_id}}"
+    },
+    "excludeFoodModifier": [
+        {
+            "coding": [
+                {
+                    "system": "http://snomed.info/sct",
+                    "code": "1296980001",
+                    "display": "Soft drink"
+                }
+            ]
+        }
+    ],
+    "oralDiet": {
+        "type": [
+            {
+                "coding": [
+                    {
+                        "system": "http://snomed.info/sct",
+                        "code": "113148007",
+                        "display": "Fluid intake encouragement"
+                    }
+                ]
+            }
+        ],
+        "nutrient": [
+            {
+                "modifier": {
+                    "coding": [
+                        {
+                            "system": "http://snomed.info/sct",
+                            "code": "444695006",
+                            "display": "Mineral water"
+                        }
+                    ]
+                },
+                "amount": {
+                    "value": 2,
+                    "unit": "L",
+                    "system": "http://unitsofmeasure.org",
+                    "code": "L"
+                }
+            }
+        ]
+    }
+}

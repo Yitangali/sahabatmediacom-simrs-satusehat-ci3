@@ -1,0 +1,149 @@
+{
+   "resourceType": "MedicationAdministration",
+   "contained": [
+      {
+         "resourceType": "Medication",
+         "meta": {
+            "profile": [
+               "https://fhir.kemkes.go.id/r4/StructureDefinition/Medication"
+            ]
+         },
+         "identifier": [
+            {
+               "system": "http://sys-ids.kemkes.go.id/medication/{{Org_id}}",
+               "use": "official",
+               "value": "123456790"
+            }
+         ],
+         "id": "123456790",
+         "code": {
+            "coding": [
+               {
+                  "system": "http://sys-ids.kemkes.go.id/kfa",
+                  "code": "93001603",
+                  "display": "Furosemide 40 mg Tablet (KIMIA FARMA)"
+               }
+            ]
+         },
+         "status": "active",
+         "manufacturer": {
+            "reference": "Organization/90000001"
+         },
+         "form": {
+            "coding": [
+               {
+                  "system": "http://terminology.kemkes.go.id/CodeSystem/medication-form",
+                  "code": "BS066",
+                  "display": "Tablet"
+               }
+            ]
+         },
+         "ingredient": [
+            {
+               "itemCodeableConcept": {
+                  "coding": [
+                     {
+                        "system": "http://sys-ids.kemkes.go.id/kfa",
+                        "code": "91000581",
+                        "display": "FUROSEMIDE"
+                     }
+                  ]
+               },
+               "isActive": true,
+               "strength": {
+                  "numerator": {
+                     "value": 40,
+                     "system": "http://unitsofmeasure.org",
+                     "code": "mg"
+                  },
+                  "denominator": {
+                     "value": 1,
+                     "unit": "TAB",
+                     "system": "http://terminology.hl7.org/CodeSystem/v3-orderableDrugForm",
+                     "code": "TAB"
+                  }
+               }
+            }
+         ],
+         "batch": {
+            "lotNumber": "1725042B",
+            "expirationDate": "2025-12-31"
+         },
+         "extension": [
+            {
+               "url": "https://fhir.kemkes.go.id/r4/StructureDefinition/MedicationType",
+               "valueCodeableConcept": {
+                  "coding": [
+                     {
+                        "system": "http://terminology.kemkes.go.id/CodeSystem/medication-type",
+                        "code": "NC",
+                        "display": "Non-compound"
+                     }
+                  ]
+               }
+            }
+         ]
+      }
+   ],
+   "status": "completed",
+   "category": {
+      "coding": [
+         {
+            "system": "http://terminology.hl7.org/CodeSystem/medication-admin-category",
+            "code": "inpatient",
+            "display": "Inpatient"
+         }
+      ]
+   },
+   "medicationReference": {
+      "reference": "#123456790"
+   },
+   "subject": {
+      "reference": "Patient/{{Patient_id}}"
+   },
+   "context": {
+      "reference": "Encounter/{{Encounter_id}}"
+   },
+   "effectivePeriod": {
+      "start": "2022-12-25T14:30:00+00:00",
+      "end": "2022-12-25T15:30:00+00:00"
+   },
+   "performer": [
+      {
+         "actor": {
+            "reference": "Practitioner/{{Practitioner_id}}"
+         }
+      }
+   ],
+   "reasonCode": [
+      {
+         "coding": [
+            {
+               "system": "http://terminology.hl7.org/CodeSystem/reason-medication-given",
+               "code": "b",
+               "display": "Given as Ordered"
+            }
+         ]
+      }
+   ],
+   "request": {
+      "reference": "MedicationRequest/{{MedicationRequest_FurosemideDay1}}"
+   },
+   "dosage": {
+      "route": {
+         "coding": [
+            {
+               "system": "http://www.whocc.no/atc",
+               "code": "O",
+               "display": "Oral"
+            }
+         ]
+      },
+      "dose": {
+         "value": 1,
+         "unit": "TAB",
+         "system": "http://terminology.hl7.org/CodeSystem/v3-orderableDrugForm",
+         "code": "TAB"
+      }
+   }
+}

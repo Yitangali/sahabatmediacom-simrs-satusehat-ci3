@@ -1,0 +1,53 @@
+{
+   "resourceType": "Procedure",
+   "status": "completed",
+   "category": {
+      "coding": [
+         {
+            "system": "http://snomed.info/sct",
+            "code": "409073007",
+            "display": "Education"
+         }
+      ],
+      "text": "Education"
+   },
+   "code": {
+      "coding": [
+         {
+            "system": "http://snomed.info/sct",
+            "code": "84635008",
+            "display": "Disease process or condition education "
+         },
+         {
+            "system": "http://terminology.kemkes.go.id/CodeSystem/kptl",
+            "code": "10913",
+            "display": "Edukasi Kesehatan Individu"
+         }
+      ]
+   },
+   "subject": {
+      "reference": "Patient/{{Patient_id}}",
+      "display": "{{Patient_Name}}"
+   },
+   "encounter": {
+      "reference": "Encounter/{{Encounter_id}}",
+      "display": "Edukasi Proses Penyakit, Diagnosis, dan Rencana Asuhan kepada {{Patient_Name}} di hari Kamis, 22 Desember 2022"
+   },
+   "performedPeriod": {
+      "start": "2022-12-22T10:00:00+00:00",
+      "end": "2022-12-22T11:00:00+00:00"
+   },
+   "performer": [
+      {
+         "actor": {
+            "reference": "Practitioner/{{Practitioner_id}}",
+            "display": "{{Practitioner_Name}}"
+         }
+      }
+   ],
+   "note": [
+      {
+         "text": "Edukasi Proses Penyakit, Diagnosis, dan Rencana Asuhan"
+      }
+   ]
+}
