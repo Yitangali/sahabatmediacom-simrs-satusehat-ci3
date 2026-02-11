@@ -66,7 +66,7 @@ class KondisiSaatMeninggalkanRs {
     public function createCondition_Stabil($payload) {
         return $this->client->request(
             'POST',
-            'ServiceRequest',
+            'Condition',
             $payload
         );
     }
