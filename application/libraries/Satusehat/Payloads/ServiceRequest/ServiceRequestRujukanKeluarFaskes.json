@@ -1,0 +1,80 @@
+{
+    "resourceType": "ServiceRequest",
+    "identifier": [
+        {
+            "system": "http://sys-ids.kemkes.go.id/servicerequest/{{Org_id}}",
+            "value": "00001"
+        }
+    ],
+    "status": "active",
+    "intent": "original-order",
+    "priority": "routine",
+    "category": [
+        {
+            "coding": [
+                {
+                    "system": "http://snomed.info/sct",
+                    "code": "3457005",
+                    "display": "Patient referral"
+                }
+            ]
+        }
+    ],
+    "code": {
+        "coding": [
+            {
+                "system": "http://snomed.info/sct",
+                "code": "737492002",
+                "display": "Outpatient care management"
+            }
+        ],
+        "text": "Rujukan Kasus Gagal Ginjal menggunakan Ambulance"
+    },
+    "subject": {
+        "reference": "Patient/{{Patient_id}}"
+    },
+    "encounter": {
+        "reference": "Encounter/{{Encounter_id}}",
+        "display": "Kunjungan {{Patient_Name}} di hari Kamis, 22 Desember 2022"
+    },
+    "occurrenceDateTime": "2022-12-26T09:30:00+00:00",
+    "requester": {
+        "reference": "Practitioner/{{Practitioner_id}}",
+        "display": "{{Practitioner_Name}}"
+    },
+    "performer": [
+        {
+            "reference": "Practitioner/N10000005",
+            "display": "Fatma"
+        }
+    ],
+    "reasonCode": [
+        {
+            "coding": [
+                {
+                    "system": "http://hl7.org/fhir/sid/icd-10",
+                    "code": "N18.5",
+                    "display": "Chronic kidney disease, stage 5"
+                }
+            ],
+            "text": "Gagal Ginjal Stage 5"
+        }
+    ],
+    "locationCode": [
+        {
+            "coding": [
+                {
+                    "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+                    "code": "HOSP",
+                    "display": "Hospital"
+                },
+                {
+                    "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+                    "code": "AMB",
+                    "display": "Ambulance"
+                }
+            ]
+        }
+    ],
+    "patientInstruction": "Rujukan ke RSUP Fatmawati. Dalam keadaan darurat dapat menghubungi hotline RS di nomor 14045"
+}

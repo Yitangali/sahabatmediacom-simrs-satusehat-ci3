@@ -1,0 +1,29 @@
+{
+    "resourceType": "CarePlan",
+    "title": "Perencanaan Pemulangan Pasien",
+    "status": "active",
+    "category": [
+        {
+            "coding": [
+                {
+                    "system": "http://snomed.info/sct",
+                    "code": "736372004",
+                    "display": "Discharge care plan"
+                }
+            ]
+        }
+    ],
+    "intent": "plan",
+    "description": "Pasien akan melakukan perawatan berkelanjutan atau panjang. Rutin melakukan Cuci Darah setiap 1 kali 1 Bulan",
+    "subject": {
+        "reference": "Patient/{{Patient_id}}",
+        "display": "{{Patient_Name}}"
+    },
+    "encounter": {
+        "reference": "Encounter/{{Encounter_id}}"
+    },
+    "created": "2022-12-29T16:00:00+00:00",
+    "author": {
+        "reference": "Practitioner/{{Practitioner_id}}"
+    }
+}

@@ -1,0 +1,105 @@
+{
+   "resourceType": "ClinicalImpression",
+   "identifier": [
+      {
+         "system": "http://sys-ids.kemkes.go.id/clinicalimpression/{{Org_id}}",
+         "use": "official",
+         "value": "{{Prognosis_id}}"
+      }
+   ],
+   "status": "completed",
+   "code": {
+      "coding": [
+         {
+            "system": "http://snomed.info/sct",
+            "code": "20481000",
+            "display": "Determination of prognosis"
+         }
+      ]
+   },
+   "description": "Ibu {{Patient_Name}} Terdiagnosis Gagal Ginjal Stage 5",
+   "subject": {
+      "reference": "Patient/{{Patient_id}}",
+      "display": "{{Patient_Name}}"
+   },
+   "encounter": {
+      "reference": "Encounter/{{Encounter_id}}",
+      "display": "Kunjungan {{Patient_Name}} di hari Kamis, 22 Desember 2022"
+   },
+   "effectiveDateTime": "2022-12-22T10:00:00+00:00",
+   "date": "2022-12-22T10:00:00+00:00",
+   "assessor": {
+      "reference": "Practitioner/{{Practitioner_id}}"
+   },
+   "problem": [
+      {
+         "reference": "Condition/{{Condition_DiagnosisPrimer}}"
+      }
+   ],
+   "investigation": [
+      {
+         "code": {
+            "text": "Pemeriksaan Kreatinin"
+         },
+         "item": [
+            {
+               "reference": "Observation/{{Observation_Kuantitatif}}",
+               "display": "Hasil Pemeriksaan Penunjang Laboratorium"
+            }
+         ]
+      },
+      {
+         "code": {
+            "text": "Pemeriksaan USG Ginjal"
+         },
+         "item": [
+            {
+               "reference": "Observation/{{Observation_RadResult_id}}",
+               "display": "Hasil Pemeriksaan Penunjang Radiologi"
+            }
+         ]
+      }
+   ],
+   "summary": "Prognosis Gagal Ginjal Stage 5",
+   "finding": [
+      {
+         "itemCodeableConcept": {
+            "coding": [
+               {
+                  "system": "http://hl7.org/fhir/sid/icd-10",
+                  "code": "N18.5",
+                  "display": "Chronic kidney disease, stage 5"
+               }
+            ]
+         },
+         "itemReference": {
+            "reference": "Condition/{{Diagnosis_Primer}}"
+         }
+      },
+      {
+         "itemCodeableConcept": {
+            "coding": [
+               {
+                  "system": "http://hl7.org/fhir/sid/icd-10",
+                  "code": "D63.8",
+                  "display": "Anemia in chronic kidney disease"
+               }
+            ]
+         },
+         "itemReference": {
+            "reference": "Condition/{{Diagnosis_Sekunder}}"
+         }
+      }
+   ],
+   "prognosisCodeableConcept": [
+      {
+         "coding": [
+            {
+               "system": "http://snomed.info/sct",
+               "code": "65872000",
+               "display": "Fair prognosis"
+            }
+         ]
+      }
+   ]
+}
