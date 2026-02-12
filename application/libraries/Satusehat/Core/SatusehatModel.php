@@ -30,27 +30,11 @@ class SatusehatModel {
     }
 
     public function getPractitionerId($nik) {
-        $this->CI->load->library('Satusehat/FHIR/Resource/Practitioner');
-        $response = $this->CI->practitioner->getPractitionerByNik($nik);
-        // Jika masih JSON string
-        if (is_string($response)) {
-            $response = json_decode($response, true);
-        }
+        $sql    = "SELECT ihs_number FROM practitioner WHERE nik = ? LIMIT 1";
+        $query  = $this->db->query($sql, [$nik]);
+        $row    = $query->row_array();
 
-        // 1. Ambil dari bundle FHIR (prioritas)
-        if (
-            isset($response['bundle']['entry'][0]['resource']['id'])
-        ) {
-            return $response['bundle']['entry'][0]['resource']['id'];
-        }
-
-        // 2. Fallback ke root (jika bundle tidak ada)
-        if (isset($response['practitioner_id'])) {
-            return $response['practitioner_id'];
-        }
-
-        // Tidak ditemukan
-        return null;
+        return $row['ihs_number'] ?? null;
     }
 
     public function getPractitionerName($nik) {
