@@ -31,7 +31,7 @@ class CarePlanRencanaRawatPasien extends SatusehatPayload
             "Patient_id"                        => $data['Patient_id'],
             "patient_Name"                      => $data['Patient_Name'],
             "Practitioner_id"                   => $data['Practitioner_id'],
-            "Ecnounter_id"                      => $data['Encounter_id']
+            "Encounter_id"                      => $data['Encounter_id']
         ];
 
         return $this->replacePlaceholders($payload, $variables);

@@ -30,7 +30,7 @@ class ServiceRequestCreateForSatusehat extends SatusehatPayload
                 'Org_id'                    => $data['Org_id'],
                 'ACSN'                      => $data['ACSN'],
                 'Patient_id'                => $data['Patient_id'],
-                'Encounter_id'              => $data['Patient_id'],
+                'Encounter_id'              => $data['Encounter_id'],
                 'Practitioner_id'           => $data['Practitioner_id'],
                 'Practitioner_Name'         => $data['Practitioner_Name'],
                 'Practitioner_Rad_id'       => $data['Practitioner_Rad_id'],

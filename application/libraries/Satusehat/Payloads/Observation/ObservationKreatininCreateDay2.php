@@ -29,7 +29,7 @@ class ObservationKreatininCreateDay2 extends SatusehatPayload
         $variables = [
                 'Org_id'                        => $data['Org_id'],
                 'Patient_id'                    => $data['Patient_id'],
-                'Encounter_id'                  => $data['Patient_id'],
+                'Encounter_id'                  => $data['Encounter_id'],
                 'Practitioner_Lab_id'           => $data['Practitioner_Lab_id'],
                 'Specimen_Day2_id'              => $data['Specimen_Day2_id'],
                 'ServiceRequest_LabDay2_id'     => $data['ServiceRequest_LabDay2_id']
