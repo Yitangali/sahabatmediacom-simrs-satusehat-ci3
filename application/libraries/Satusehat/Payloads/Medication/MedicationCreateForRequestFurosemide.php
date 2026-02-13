@@ -27,7 +27,13 @@ class MedicationCreateForRequestFurosemide extends SatusehatPayload
         $payload = $this->loadTemplate();
 
         $variables = [
-                'Org_id'                => $data['Org_id'],
+                'Org_id' => $data['Org_id'],
+                'Patient_id' => $data['Patient_id'],
+                'Patient_Name' => $data['Patient_Name'],
+                'Encounter_id' => $data['Encounter_id'],
+                'Practitioner_id' => $data['Practitioner_id'],
+                'Practitioner_Name' => $data['Practitioner_Name'],
+                'Condition_DiagnosisPrimer' => $data['Condition_DiagnosisPrimer']
         ];
 
         return $this->replacePlaceholders($payload, $variables);

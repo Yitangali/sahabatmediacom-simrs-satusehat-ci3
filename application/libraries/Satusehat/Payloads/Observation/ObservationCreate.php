@@ -31,6 +31,7 @@ class ObservationCreate extends SatusehatPayload
                 'Patient_id'            => $data['Patient_id'],
                 'Encounter_id'          => $data['Encounter_id'],
                 'Practitioner_Rad_id'   => $data['Practitioner_Rad_id'],
+                'ServiceRequest_Rad_id' => $data['ServiceRequest_Rad_id'],
                 'ImagingStudy_id'       => $data['ImagingStudy_id']
         ];
 
