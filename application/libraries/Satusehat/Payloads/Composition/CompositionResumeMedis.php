@@ -12,7 +12,7 @@ class CompositionResumeMedis extends SatusehatPayload
         $CI =& get_instance();
         $CI->load->library('Satusehat/Core/SatusehatConfig');
         $CI->load->library('Satusehat/Core/SatusehatModel');
-        $this->templatePath = APPPATH . 'libraries/Satusehat/Payloads/Composition/CompositionResumeMedis.json';
+        $this->templatePath = APPPATH . 'libraries/Satusehat/Payloads/Composition/CompositionResumeMedis2.json';
         //$this->config = $this->CI->satusehatconfig->get('Org_id');
     }
 
@@ -76,14 +76,14 @@ class CompositionResumeMedis extends SatusehatPayload
             'ServiceRequest_Rad_id' => $data['ServiceRequest_Rad_id'],
             'Procedure_Rad_id' => $data['Procedure_Rad_id'],
             'Observation_Rad_id' => $data['Observation_Rad_id'],
-            'ImagingStudy_id' => $data['ImagingStudy_id'],
-            'Observation_RadResult_id' => $data['Observation_RadResult_id'],
-            'DiagnosticReport_Rad_id' => $data['DiagnosticReport_Rad_id'],
+            // 'ImagingStudy_id' => $data['ImagingStudy_id'],
+            // 'Observation_RadResult_id' => $data['Observation_RadResult_id'],
+            // 'DiagnosticReport_Rad_id' => $data['DiagnosticReport_Rad_id'],
 
-            'Rasional_Klinis' => $data['Rasional_Klinis'],
-            'Diagnosis_Primer' => $data['Diagnosis_Primer'],
-            'Diagnosis_Sekunder' => $data['Diagnosis_Sekunder'],
-            'Penilaian_Risiko' => $data['Penilaian_Risiko'],
+            // 'Rasional_Klinis' => $data['Rasional_Klinis'],
+            // 'Diagnosis_Primer' => $data['Diagnosis_Primer'],
+            // 'Diagnosis_Sekunder' => $data['Diagnosis_Sekunder'],
+            // 'Penilaian_Risiko' => $data['Penilaian_Risiko'],
 
             'Procedure_EKG' => $data['Procedure_EKG'],
             'Observation_EKG' => $data['Observation_EKG'],
@@ -116,7 +116,7 @@ class CompositionResumeMedis extends SatusehatPayload
             'NutritionOrder_Diet' => $data['NutritionOrder_Diet'],
             'Procedure_Edukasi' => $data['Procedure_Edukasi'],
 
-            'Prognosis_Pulang' => $data['Prognosis_Pulang'],
+            //'Prognosis_Pulang' => $data['Prognosis_Pulang'],
             'KondisiMeninggalkanRS' => $data['KondisiMeninggalkanRS'],
 
             'Observation_KriteriaRencanaPemulangan' => $data['Observation_KriteriaRencanaPemulangan'],
@@ -126,6 +126,29 @@ class CompositionResumeMedis extends SatusehatPayload
 
 
         return $this->replacePlaceholders($payload, $variables);
+    }
+
+    public function saveJson(array $payload, string $filename = null): string
+    {
+        if ($filename === null) {
+            $filename = 'composition_resume_medis_' . date('Ymd_His') . '.json';
+        }
+
+        $path = APPPATH . 'libraries/Satusehat/Payloads/';
+
+        // buat folder jika belum ada
+        if (!is_dir($path)) {
+            mkdir($path, 0777, true);
+        }
+
+        $fullPath = $path . $filename;
+
+        file_put_contents(
+            $fullPath,
+            json_encode($payload, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES)
+        );
+
+        return $fullPath;
     }
 }
 
