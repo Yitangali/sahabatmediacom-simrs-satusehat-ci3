@@ -1,0 +1,551 @@
+{
+    "resourceType": "Composition",
+    "status": "final",
+    "category": [
+        {
+            "coding": [
+                {
+                    "system": "http://loinc.org",
+                    "code": "LP173421-1",
+                    "display": "Report"
+                }
+            ]
+        }
+    ],
+    "type": {
+        "coding": [
+            {
+                "system": "http://loinc.org",
+                "code": "34105-7",
+                "display": "Hospital Discharge summary"
+            }
+        ]
+    },
+    "subject": {
+        "reference": "Patient/P01836748436"
+    },
+    "date": "2022-12-30T09:30:27+00:00",
+    "title": "Resume Medis Pasien Rawat Inap Theodore Elisjah pada tanggal 30 Desember 2022",
+    "author": [
+        {
+            "reference": "Practitioner/10010910332"
+        }
+    ],
+    "custodian": {
+        "reference": "Organization/f588feae-4ba0-40f0-af65-c4ec294cbd99"
+    },
+    "encounter": {
+        "reference": "Encounter/72d09428-fbc3-4847-979c-7cbd1622c521"
+    },
+    "section": [
+        {
+            "title": "Anamnesis",
+            "code": {
+                "coding": [
+                    {
+                        "system": "http://terminology.kemkes.go.id",
+                        "code": "TK000003",
+                        "display": "Anamnesis"
+                    }
+                ]
+            },
+            "section": [
+                {
+                    "title": "Keluhan Utama",
+                    "code": {
+                        "coding": [
+                            {
+                                "system": "http://loinc.org",
+                                "code": "10154-3",
+                                "display": "Chief complaint Narrative - Reported"
+                            }
+                        ]
+                    },
+                    "entry": [
+                        {
+                            "reference": "Condition/3dacc267-d7ed-4a1a-9874-c45579d6ec05"
+                        }
+                    ]
+                },
+                {
+                    "title": "Keluhan Penyerta",
+                    "code": {
+                        "coding": [
+                            {
+                                "system": "http://loinc.org",
+                                "code": "11450-4",
+                                "display": "Problem list - Reported"
+                            }
+                        ]
+                    },
+                    "entry": [
+                        {
+                            "reference": "Condition/783c6701-e142-4d01-8a27-f207000a9153"
+                        }
+                    ]
+                },
+                {
+                    "title": "Riwayat Penyakit Pribadi Terdahulu",
+                    "code": {
+                        "coding": [
+                            {
+                                "system": "http://loinc.org",
+                                "code": "11348-0",
+                                "display": "History of Past illness Narrative"
+                            }
+                        ]
+                    },
+                    "entry": [
+                        {
+                            "reference": "Condition/a3a8f7b1-77b4-49dc-9e2c-5f8918fd2a4a"
+                        }
+                    ]
+                },
+                {
+                    "title": "Riwayat Penyakit Pribadi Sekarang",
+                    "code": {
+                        "coding": [
+                            {
+                                "system": "http://loinc.org",
+                                "code": "10164-2",
+                                "display": "History of Present illness Narrative"
+                            }
+                        ]
+                    },
+                    "entry": [
+                        {
+                            "reference": "Condition/2a35bd9a-e9b1-4e2f-bf61-dfb02f113af7"
+                        }
+                    ]
+                },
+                {
+                    "title": "Riwayat Penyakit Keluarga",
+                    "code": {
+                        "coding": [
+                            {
+                                "system": "http://loinc.org",
+                                "code": "10157-6",
+                                "display": "History of family member diseases Narrative"
+                            }
+                        ]
+                    },
+                    "entry": [
+                        {
+                            "reference": "FamilyMemberHistory/1791b09a-e52a-4411-97f6-13974ba196bf"
+                        }
+                    ]
+                },
+                {
+                    "title": "Riwayat Alergi",
+                    "code": {
+                        "coding": [
+                            {
+                                "system": "http://loinc.org",
+                                "code": "48765-2",
+                                "display": "Allergies and adverse reactions Document"
+                            }
+                        ]
+                    },
+                    "entry": [
+                        {
+                            "reference": "AllergyIntolerance/d88f89e2-a611-499f-9bea-b5c1405e4f0f"
+                        },
+                        {
+                            "reference": "AllergyIntolerance/aca35f8d-4fd1-4c40-8b1e-73f35e0bedcd"
+                        },
+                        {
+                            "reference": "AllergyIntolerance/7bc05687-7c24-4fa2-9b10-e1005bcd5f3f"
+                        }
+                    ]
+                },
+                {
+                    "title": "Riwayat Pengobatan",
+                    "code": {
+                        "coding": [
+                            {
+                                "system": "http://loinc.org",
+                                "code": "10160-0",
+                                "display": "History of Medication use Narrative"
+                            }
+                        ]
+                    },
+                    "entry": [
+                        {
+                            "reference": "MedicationStatement/"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "Pemeriksaan Fisik",
+            "code": {
+                "coding": [
+                    {
+                        "system": "http://terminology.kemkes.go.id",
+                        "code": "TK000007",
+                        "display": "Pemeriksaan Fisik"
+                    }
+                ]
+            },
+            "section": [
+                {
+                    "title": "Tanda Vital",
+                    "code": {
+                        "coding": [
+                            {
+                                "system": "http://loinc.org",
+                                "code": "8716-3",
+                                "display": "Vital signs"
+                            }
+                        ]
+                    },
+                    "entry": [
+                        {
+                            "reference": "Observation/de9d014e-ceec-4a51-a52b-de98c60a19f4"
+                        },
+                        {
+                            "reference": "Observation/74c89f81-af0a-4526-b665-089cbaa1aa8b"
+                        },
+                        {
+                            "reference": "Observation/38110869-94fd-4ad8-a2bf-52c0b587387b"
+                        },
+                        {
+                            "reference": "Observation/a6f0177c-54bc-4436-b63b-bf9b40abcd3f"
+                        },
+                        {
+                            "reference": "Observation/1f7a304b-6327-472c-9f4d-2f9fc4412ce5"
+                        },
+                        {
+                            "reference": "Observation/587821a9-14c1-4d61-a662-45355571a9f8"
+                        },
+                        {
+                            "reference": "Observation/203603ac-7351-4ff8-a8f6-e9bf177f93e1"
+                        },
+                        {
+                            "reference": "Observation/25ef3fcd-d916-4ee5-993c-a27c26ae5545"
+                        },
+                        {
+                            "reference": "Observation/5862a65f-1137-45a3-b94a-46f07f8392c8"
+                        }
+                    ]
+                },
+                {
+                    "title": "Pemeriksaan Fisik Head to Toe",
+                    "code": {
+                        "coding": [
+                            {
+                                "system": "http://loinc.org",
+                                "code": "10187-3",
+                                "display": "Review of systems Narrative - Reported"
+                            }
+                        ]
+                    },
+                    "entry": [
+                        {
+                            "reference": "Observation/81043585-a6a3-4ae7-b7e1-3db10c574d95"
+                        },
+                        {
+                            "reference": "Observation/89461f45-b960-4ae5-bf52-7c3567a592bf"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "Pemeriksaan Fungsional",
+            "code": {
+                "coding": [
+                    {
+                        "system": "http://loinc.org",
+                        "code": "47420-5",
+                        "display": "Functional status assessment note"
+                    }
+                ]
+            },
+            "section": [
+                {
+                    "title": "Status Psikologis",
+                    "entry": [
+                        {
+                            "reference": "Observation/606eb9a5-7508-4255-af13-1e885d20ff13"
+                        }
+                    ]
+                },
+                {
+                    "title": "Skor ADL",
+                    "entry": [
+                        {
+                            "reference": "Observation/317ca09f-1bf5-4b96-8157-403de629c947"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "Perencanaan Perawatan",
+            "code": {
+                "coding": [
+                    {
+                        "system": "http://loinc.org",
+                        "code": "18776-5",
+                        "display": "Plan of treatment (narrative)"
+                    }
+                ]
+            },
+            "entry": [
+                {
+                    "reference": "ClinicalImpression/5033d59c-aa39-4869-9fcc-7a43200ce945"
+                },
+                {
+                    "reference": "Goal/c67a12eb-dc61-4a86-a804-2c2b9c6b612a"
+                },
+                {
+                    "reference": "CarePlan/fa56e027-27a9-450b-a66a-b874a3acb5d9"
+                },
+                {
+                    "reference": "CarePlan/d39ac42d-97fe-4915-b526-c301131889c8"
+                }
+            ]
+        },
+        {
+            "title": "Pemeriksaan Penunjang",
+            "code": {
+                "coding": [
+                    {
+                        "system": "http://terminology.kemkes.go.id",
+                        "code": "TK000009",
+                        "display": "Hasil Pemeriksaan Penunjang"
+                    }
+                ]
+            },
+            "section": [
+                {
+                    "title": "Hasil Pemeriksaan Laboratorium",
+                    "code": {
+                        "coding": [
+                            {
+                                "system": "http://loinc.org",
+                                "code": "11502-2",
+                                "display": "Laboratory report"
+                            }
+                        ]
+                    },
+                    "entry": [
+                        {
+                            "reference": "ServiceRequest/36547537-ed9a-45e7-a06e-01f4c6f4ecb4"
+                        },
+                        {
+                            "reference": "Procedure/48983a35-89ed-4bde-97ba-559a65ebf24a"
+                        },
+                        {
+                            "reference": "Specimen/7e9202f2-4305-48f2-9061-f41fa39ffa49"
+                        },
+                        {
+                            "reference": "Observation/35576ad8-e110-4e15-9134-a9bdc89f9e13"
+                        },
+                        {
+                            "reference": "DiagnosticReport/cd36f755-21ff-43bd-b3cb-561e2389c647"
+                        }
+                    ]
+                },
+                {
+                    "title": "Hasil Pemeriksaan Radiologi",
+                    "code": {
+                        "coding": [
+                            {
+                                "system": "http://loinc.org",
+                                "code": "18782-3",
+                                "display": "Radiology Study observation (narrative)"
+                            }
+                        ]
+                    },
+                    "entry": [
+                        {
+                            "reference": "ServiceRequest/4ae8e68a-b140-4c75-84b5-8ea72b7bddb1"
+                        },
+                        {
+                            "reference": "Procedure/0499ea03-0095-4c2f-a78d-567b01b29337"
+                        },
+                        {
+                            "reference": "Observation/d29be96a-6096-4244-8eee-465891de7fdf"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "Diagnosis",
+            "section": [
+                {
+                    "title": "Diagnosis Akhir",
+                    "code": {
+                        "coding": [
+                            {
+                                "system": "http://loinc.org",
+                                "code": "78375-3",
+                                "display": "Discharge diagnosis Narrative"
+                            }
+                        ]
+                    },
+                    "entry": []
+                }
+            ]
+        },
+        {
+            "title": "Tindakan/Prosedur Medis",
+            "code": {
+                "coding": [
+                    {
+                        "system": "http://terminology.kemkes.go.id",
+                        "code": "TK000005",
+                        "display": "Tindakan/Prosedur Medis"
+                    }
+                ]
+            },
+            "entry": [
+                {
+                    "reference": "Procedure/9dbdbb36-c6f9-47ed-ae42-f760328aeeb3"
+                },
+                {
+                    "reference": "Observation/54853a62-b2b2-43b7-9579-743ca38f52fd"
+                },
+                {
+                    "reference": "Procedure/39611ba1-366c-41f2-b4fe-24376d06be3f"
+                }
+            ]
+        },
+        {
+            "title": "Farmasi",
+            "code": {
+                "coding": [
+                    {
+                        "system": "http://terminology.kemkes.go.id",
+                        "code": "TK000013",
+                        "display": "Obat"
+                    }
+                ]
+            },
+            "section": [
+                {
+                    "title": "Obat Saat Kunjungan",
+                    "code": {
+                        "coding": [
+                            {
+                                "system": "http://loinc.org",
+                                "code": "42346-7",
+                                "display": "Medications on admission (narrative)"
+                            }
+                        ]
+                    },
+                    "entry": []
+                },
+                {
+                    "title": "Obat Pulang",
+                    "code": {
+                        "coding": [
+                            {
+                                "system": "http://loinc.org",
+                                "code": "75311-1",
+                                "display": "Discharge medications Narrative"
+                            }
+                        ]
+                    },
+                    "entry": []
+                }
+            ]
+        },
+        {
+            "title": "Diet",
+            "section": [
+                {
+                    "title": "Rekomendasi Diet",
+                    "code": {
+                        "coding": [
+                            {
+                                "system": "http://loinc.org",
+                                "code": "42344-2",
+                                "display": "Discharge diet (narrative)"
+                            }
+                        ]
+                    },
+                    "entry": [
+                        {
+                            "reference": "NutritionOrder/ef494c0d-f14e-4451-9213-28254fbd4bfc"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "Edukasi",
+            "code": {
+                "coding": [
+                    {
+                        "system": "http://loinc.org",
+                        "code": "34895-3",
+                        "display": "Education note"
+                    }
+                ]
+            },
+            "entry": [
+                {
+                    "reference": "Procedure/e14fe1e5-f1ca-4b83-9452-d0bd8ae967d9"
+                }
+            ]
+        },
+        {
+            "title": "Kondisi Saat Meninggalkan Rumah Sakit",
+            "code": {
+                "coding": [
+                    {
+                        "system": "http://loinc.org",
+                        "code": "10184-0",
+                        "display": "Hospital discharge physical findings Narrative"
+                    }
+                ]
+            },
+            "entry": [
+                {
+                    "reference": "Condition/527e1234-3081-4761-813a-09ac84cf86db"
+                }
+            ]
+        },
+        {
+            "title": "Rencana Tindak Lanjut",
+            "code": {
+                "coding": [
+                    {
+                        "system": "http://loinc.org",
+                        "code": "8653-8",
+                        "display": "Hospital Discharge instructions"
+                    }
+                ]
+            },
+            "entry": [
+                {
+                    "reference": "Observation/cecd76f0-2dac-4499-a493-84a37b918ee1"
+                },
+                {
+                    "reference": "CarePlan/34c789db-f24c-448e-9b83-6f0de4ce97c2"
+                }
+            ]
+        },
+        {
+            "title": "Perjalanan Kunjungan Pasien",
+            "code": {
+                "coding": [
+                    {
+                        "system": "http://loinc.org",
+                        "code": "8648-8",
+                        "display": "Hospital course Narrative"
+                    }
+                ]
+            },
+            "text": {
+                "status": "additional",
+                "div": "Pasien  Theodore Elisjah  masuk rumah sakit pada tanggal 25 Desember 2022 dengan keluhan utama yang sudah dirasakan selama 1 hari sebelum kunjungan. Selama anamnesis, pasien mengeluhkan selama 1 hari sebelum kunjungan. Riwayat penyakit terdahulu menunjukkan bahwa pasien sudah mengalami gejala selama 3 tahun dan tidak rutin berobat. Riwayat penyakit saat ini menunjukkan keluhan dimulai 1 hari sebelum kunjungan dengan intensitas sedang yang meningkat selama 4 jam terakhir. Pasien memiliki riwayat penyakit keluarga terkait keluhannya. Pasien juga memiliki riwayat alergi dan melaporkan mengonsumsi obat dua kali sehari selama 2 minggu terakhir. Hasil pemeriksaan fisik, menunjukkan hasil dalam batas normal. Pemeriksaan fungsional dan sosial juga dilakukan. Pasien kemudian menjalani pemeriksaan penunjang laboratorium dan radiologi. Pasien juga menjalani prosedur diagnostik dan terapetik. Pasien terkonfirmasi dengan Gagal Ginjal Stage 5 yang juga disertai dengan diagnosis sekunder berupa Anemia. Pasien diberi obat pada saat saat kunjungan dan obat untuk dibawa pulang. Pasien pulang dengan prognosis baik dan keadaan stabil pada 30 Desember 2022. Pasien direncanakan untuk melakukan kontrol kembali dan melakukan hemodialisis rutin setiap 1 minggu sekali."
+            }
+        }
+    ]
+}

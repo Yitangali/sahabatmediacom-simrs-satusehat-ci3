@@ -1,0 +1,96 @@
+{
+    "class": {
+        "code": "IMP",
+        "display": "inpatient encounter",
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode"
+    },
+    "id": "72d09428-fbc3-4847-979c-7cbd1622c521",
+    "identifier": [
+        {
+            "system": "http://sys-ids.kemkes.go.id/encounter/f588feae-4ba0-40f0-af65-c4ec294cbd99",
+            "value": "REG-2026-003"
+        }
+    ],
+    "location": [
+        {
+            "extension": [
+                {
+                    "extension": [
+                        {
+                            "url": "value",
+                            "valueCodeableConcept": {
+                                "coding": [
+                                    {
+                                        "code": "1",
+                                        "display": "Kelas 1",
+                                        "system": "http://terminology.kemkes.go.id/CodeSystem/locationServiceClass-Inpatient"
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "url": "upgradeClassIndicator",
+                            "valueCodeableConcept": {
+                                "coding": [
+                                    {
+                                        "code": "kelas-tetap",
+                                        "display": "Kelas Tetap Perawatan",
+                                        "system": "http://terminology.kemkes.go.id/CodeSystem/locationUpgradeClass"
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    "url": "https://fhir.kemkes.go.id/r4/StructureDefinition/ServiceClass"
+                }
+            ],
+            "location": {
+                "display": "Bed 2, Ruang 210, Bangsal Rawat Inap Kelas 1, Layanan Penyakit Dalam, Lantai 2, Gedung Utama",
+                "reference": "Location/55c65a16-5e62-43c5-8599-9c53055c9ca4"
+            }
+        }
+    ],
+    "meta": {
+        "lastUpdated": "2026-02-12T02:07:22.909555+00:00",
+        "versionId": "MTc3MDg2MjA0MjkwOTU1NTAwMA"
+    },
+    "participant": [
+        {
+            "individual": {
+                "display": "dr. Nicholas Evan, Sp.B.",
+                "reference": "Practitioner/10010910332"
+            },
+            "type": [
+                {
+                    "coding": [
+                        {
+                            "code": "ATND",
+                            "display": "attender",
+                            "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType"
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "period": {
+        "start": "2022-12-25T08:00:00+00:00"
+    },
+    "resourceType": "Encounter",
+    "serviceProvider": {
+        "reference": "Organization/f588feae-4ba0-40f0-af65-c4ec294cbd99"
+    },
+    "status": "in-progress",
+    "statusHistory": [
+        {
+            "period": {
+                "start": "2022-12-25T08:00:00+00:00"
+            },
+            "status": "in-progress"
+        }
+    ],
+    "subject": {
+        "display": "Theodore Elisjah",
+        "reference": "Patient/P01836748436"
+    }
+}
