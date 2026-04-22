@@ -31,7 +31,7 @@ class ClinicalImpressionPatchRasionalKlinis extends SatusehatPayload
                 'Diagnosis_Sekunder'    => $data['Diagnosis_Sekunder']
         ];
 
-        return $this->replacePlaceholders($payload, $variables);
+        return $this->pregReplacePlaceholders($payload, $variables);
     }
 }
 

@@ -125,7 +125,7 @@ class CompositionResumeMedis extends SatusehatPayload
         ];
 
 
-        return $this->replacePlaceholders($payload, $variables);
+        return $this->pregReplacePlaceholders($payload, $variables);
     }
 
     public function saveJson(array $payload, string $filename = null): string

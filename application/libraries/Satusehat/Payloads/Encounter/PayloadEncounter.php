@@ -43,7 +43,7 @@ class PayloadEncounter extends SatusehatPayload
             "start_period"                  => $data['start_period']
         ];
 
-        return $this->replacePlaceholders($payload, $variables);
+        return $this->pregReplacePlaceholders($payload, $variables);
     }
 }
 

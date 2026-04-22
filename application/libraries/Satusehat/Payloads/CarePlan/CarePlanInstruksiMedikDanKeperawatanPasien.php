@@ -34,7 +34,7 @@ class CarePlanInstruksiMedikDanKeperawatanPasien extends SatusehatPayload
             "Goal_TujuanPerawatan"              => $data['Goal_TujuanPerawatan']
         ];
 
-        return $this->replacePlaceholders($payload, $variables);
+        return $this->pregReplacePlaceholders($payload, $variables);
     }
 }
 

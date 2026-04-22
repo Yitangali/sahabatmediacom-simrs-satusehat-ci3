@@ -33,7 +33,7 @@ class CarePlanPerencanaanPemulanganPasien extends SatusehatPayload
                 'Practitioner_id' => $data['Practitioner_id'],
         ];
 
-        return $this->replacePlaceholders($payload, $variables);
+        return $this->pregReplacePlaceholders($payload, $variables);
     }
 }
 

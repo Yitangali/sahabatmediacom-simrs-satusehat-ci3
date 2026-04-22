@@ -35,7 +35,7 @@ class ClinicalImpressionRasionalKlinis extends SatusehatPayload
                 'Observation_RadResult_id'     => $data['Observation_RadResult_id']
         ];
 
-        return $this->replacePlaceholders($payload, $variables);
+        return $this->pregReplacePlaceholders($payload, $variables);
     }
 }
 

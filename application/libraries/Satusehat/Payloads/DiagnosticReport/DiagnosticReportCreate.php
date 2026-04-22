@@ -36,7 +36,7 @@ class DiagnosticReportCreate extends SatusehatPayload
                 'ServiceRequest_Rad_id'        => $data['ServiceRequest_Rad_id']
         ];
 
-        return $this->replacePlaceholders($payload, $variables);
+        return $this->pregReplacePlaceholders($payload, $variables);
     }
 }
 

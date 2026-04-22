@@ -33,7 +33,7 @@ class ConditionPrimaryGagalGinjal extends SatusehatPayload
                 'Rasional_Klinis'              => $data['Rasional_Klinis']
         ];
 
-        return $this->replacePlaceholders($payload, $variables);
+        return $this->pregReplacePlaceholders($payload, $variables);
     }
 }
 

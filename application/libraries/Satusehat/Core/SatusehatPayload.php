@@ -24,4 +24,20 @@ abstract class SatusehatPayload
 
         return $payload;
     }
+
+    protected function pregReplacePlaceholders(array $payload, array $variables): array {
+        array_walk_recursive($payload, function (&$value) use ($variables) {
+            if (!is_string($value)) {
+                return;
+            }
+
+            $value = preg_replace_callback('/{{(.*?)}}/', function($matches) use($variables) {
+                $key = $matches[1];
+                return $variables[$key] ?? '';
+            }, $value);
+        });
+
+        return $payload;
+    }
+
 }
