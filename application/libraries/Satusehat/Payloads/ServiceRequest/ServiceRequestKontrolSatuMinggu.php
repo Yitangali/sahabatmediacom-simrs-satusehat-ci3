@@ -36,7 +36,7 @@ class ServiceRequestKontrolSatuMinggu extends SatusehatPayload
                 'Location_Poli' => $data['Location_Poli']
         ];
 
-        return $this->replacePlaceholders($payload, $variables);
+        return $this->pregReplacePlaceholders($payload, $variables);
     }
 }
 

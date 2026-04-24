@@ -35,7 +35,7 @@ class ObservationCreate extends SatusehatPayload
                 'ImagingStudy_id'       => $data['ImagingStudy_id']
         ];
 
-        return $this->replacePlaceholders($payload, $variables);
+        return $this->pregReplacePlaceholders($payload, $variables);
     }
 }
 

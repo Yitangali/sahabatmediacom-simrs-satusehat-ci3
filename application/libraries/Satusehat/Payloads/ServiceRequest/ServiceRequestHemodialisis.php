@@ -34,7 +34,7 @@ class ServiceRequestHemodialisis extends SatusehatPayload
                 'Practitioner_Name'     => $data['Practitioner_Name']
         ];
 
-        return $this->replacePlaceholders($payload, $variables);
+        return $this->pregReplacePlaceholders($payload, $variables);
     }
 }
 

@@ -38,7 +38,7 @@ class MedicationDispenseCreateFurosemide extends SatusehatPayload
                 'MedicationRequest_FurosemideDay1' => $data['MedicationRequest_FurosemideDay1']
         ];
 
-        return $this->replacePlaceholders($payload, $variables);
+        return $this->pregReplacePlaceholders($payload, $variables);
     }
 }
 

@@ -34,7 +34,7 @@ class MedicationAdministrationCreateInfusRingerLaktat extends SatusehatPayload
                 'MedicationRequest_InfusDay1' => $data['MedicationRequest_InfusDay1']
         ];
 
-        return $this->replacePlaceholders($payload, $variables);
+        return $this->pregReplacePlaceholders($payload, $variables);
     }
 }
 

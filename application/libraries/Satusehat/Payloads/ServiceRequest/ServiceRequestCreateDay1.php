@@ -37,7 +37,7 @@ class ServiceRequestCreateDay1 extends SatusehatPayload
             "Condition_KeluhanUtama_id"         => $data['Condition_KeluhanUtama_id']
         ];
 
-        return $this->replacePlaceholders($payload, $variables);
+        return $this->pregReplacePlaceholders($payload, $variables);
     }
 }
 

@@ -37,7 +37,7 @@ class SpecimenCreateDay1 extends SatusehatPayload
                 'ServiceRequest_LabDay1_id'     => $data['ServiceRequest_LabDay1_id']
         ];
 
-        return $this->replacePlaceholders($payload, $variables);
+        return $this->pregReplacePlaceholders($payload, $variables);
     }
 }
 

@@ -31,7 +31,7 @@ class LocationCreateInstalasiGawatDarurat extends SatusehatPayload
             "Pelayanan_GD_id"                 => $data['Pelayanan_GD_id']
         ];
 
-        return $this->replacePlaceholders($payload, $variables);
+        return $this->pregReplacePlaceholders($payload, $variables);
     }
 }
 

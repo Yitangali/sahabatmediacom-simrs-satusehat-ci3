@@ -40,7 +40,7 @@ class ServiceRequestCreateForSatusehat extends SatusehatPayload
                 'Procedure_Rad_id'          => $data['Procedure_Rad_id']
         ];
 
-        return $this->replacePlaceholders($payload, $variables);
+        return $this->pregReplacePlaceholders($payload, $variables);
     }
 }
 

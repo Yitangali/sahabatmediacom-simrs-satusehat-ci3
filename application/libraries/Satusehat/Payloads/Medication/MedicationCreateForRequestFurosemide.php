@@ -36,7 +36,7 @@ class MedicationCreateForRequestFurosemide extends SatusehatPayload
                 'Condition_DiagnosisPrimer' => $data['Condition_DiagnosisPrimer']
         ];
 
-        return $this->replacePlaceholders($payload, $variables);
+        return $this->pregReplacePlaceholders($payload, $variables);
     }
 }
 

@@ -38,7 +38,7 @@ class ServiceRequestCreateDay2 extends SatusehatPayload
             "Procedure_StatusPuasa_Day2_id"     => $data['Procedure_StatusPuasa_Day2_id']
         ];
 
-        return $this->replacePlaceholders($payload, $variables);
+        return $this->pregReplacePlaceholders($payload, $variables);
     }
 }
 

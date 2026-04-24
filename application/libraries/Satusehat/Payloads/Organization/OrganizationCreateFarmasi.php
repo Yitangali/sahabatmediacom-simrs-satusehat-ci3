@@ -31,7 +31,7 @@ class OrganizationCreateFarmasi extends SatusehatPayload
             "Divisi_Yanmed_id"              => $data['Divisi_Yanmed_id']
         ];
 
-        return $this->replacePlaceholders($payload, $variables);
+        return $this->pregReplacePlaceholders($payload, $variables);
     }
 }
 

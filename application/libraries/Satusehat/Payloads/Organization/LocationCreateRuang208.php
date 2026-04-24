@@ -32,7 +32,7 @@ class LocationCreateRuang208 extends SatusehatPayload
             "Location_BangsalKelas2_id"     => $data['Location_BangsalKelas2_id']
         ];
 
-        return $this->replacePlaceholders($payload, $variables);
+        return $this->pregReplacePlaceholders($payload, $variables);
     }
 }
 

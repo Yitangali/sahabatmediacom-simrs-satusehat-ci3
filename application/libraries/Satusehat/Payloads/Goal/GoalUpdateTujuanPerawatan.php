@@ -33,7 +33,7 @@ class GoalUpdateTujuanPerawatan extends SatusehatPayload
             "Condition_KeluhanUtama"            => $data['Condition_KeluhanUtama']
         ];
 
-        return $this->replacePlaceholders($payload, $variables);
+        return $this->pregReplacePlaceholders($payload, $variables);
     }
 }
 

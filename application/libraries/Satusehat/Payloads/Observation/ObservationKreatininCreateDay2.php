@@ -35,7 +35,7 @@ class ObservationKreatininCreateDay2 extends SatusehatPayload
                 'ServiceRequest_LabDay2_id'     => $data['ServiceRequest_LabDay2_id']
         ];
 
-        return $this->replacePlaceholders($payload, $variables);
+        return $this->pregReplacePlaceholders($payload, $variables);
     }
 }
 

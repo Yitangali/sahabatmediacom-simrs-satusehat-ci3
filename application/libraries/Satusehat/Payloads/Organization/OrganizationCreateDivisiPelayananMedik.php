@@ -30,7 +30,7 @@ class OrganizationCreateDivisiPelayananMedik extends SatusehatPayload
             "Org_id"                        => $data['Org_id']
         ];
 
-        return $this->replacePlaceholders($payload, $variables);
+        return $this->pregReplacePlaceholders($payload, $variables);
     }
 }
 

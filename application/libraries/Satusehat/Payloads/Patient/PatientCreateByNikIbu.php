@@ -30,7 +30,7 @@ class PatientCreateByNikIbu extends SatusehatPayload
             "nik_ibu"                        => $data['nik_ibu']
         ];
 
-        return $this->replacePlaceholders($payload, $variables);
+        return $this->pregReplacePlaceholders($payload, $variables);
     }
 }
 

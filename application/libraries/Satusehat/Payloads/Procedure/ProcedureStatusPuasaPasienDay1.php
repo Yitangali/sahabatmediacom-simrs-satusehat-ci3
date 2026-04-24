@@ -34,7 +34,7 @@ class ProcedureStatusPuasaPasienDay1 extends SatusehatPayload
             "Encounter_id"                      => $data['Encounter_id']
         ];
 
-        return $this->replacePlaceholders($payload, $variables);
+        return $this->pregReplacePlaceholders($payload, $variables);
     }
 }
 

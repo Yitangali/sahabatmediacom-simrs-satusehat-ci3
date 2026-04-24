@@ -33,7 +33,7 @@ class ObservationJariKaki extends SatusehatPayload
             "Patient_Name"                      => $data['Patient_Name']
         ];
 
-        return $this->replacePlaceholders($payload, $variables);
+        return $this->pregReplacePlaceholders($payload, $variables);
     }
 }
 

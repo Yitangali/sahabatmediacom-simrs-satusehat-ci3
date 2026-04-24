@@ -36,7 +36,7 @@ class QuestionnaireResponsePengkajianResep extends SatusehatPayload
                 'MedicationRequest_id_1b' => $data['MedicationRequest_id_1b']
         ];
 
-        return $this->replacePlaceholders($payload, $variables);
+        return $this->pregReplacePlaceholders($payload, $variables);
     }
 }
 

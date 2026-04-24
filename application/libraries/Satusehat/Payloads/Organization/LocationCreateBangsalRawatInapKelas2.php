@@ -31,7 +31,7 @@ class LocationCreateBangsalRawatInapKelas2 extends SatusehatPayload
             "Layanan_PD_id"                 => $data['Layanan_PD_id']
         ];
 
-        return $this->replacePlaceholders($payload, $variables);
+        return $this->pregReplacePlaceholders($payload, $variables);
     }
 }
 
