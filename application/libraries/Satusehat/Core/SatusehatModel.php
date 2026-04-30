@@ -14,19 +14,19 @@ class SatusehatModel {
     }
 
     public function getPatientId($nik) {
-        $sql    = "SELECT ihs_number FROM patient WHERE nik = ? LIMIT 1";
+        $sql    = "SELECT satusehat_patient_id FROM satusehat_pre WHERE nik = ? LIMIT 1";
         $query  = $this->db->query($sql, [$nik]);
         $row    = $query->row_array();
 
-        return $row['ihs_number'] ?? null;
+        return $row['satusehat_patient_id'] ?? null;
     }
 
     public function getPatientName($nik) {
-        $sql    = "SELECT nama FROM patient WHERE nik = ? LIMIT 1";
+        $sql    = "SELECT name FROM satusehat_pre WHERE nik = ? LIMIT 1";
         $query  = $this->db->query($sql, [$nik]);
         $row    = $query->row_array();
 
-        return $row['nama'] ?? null;
+        return $row['name'] ?? null;
     }
 
     public function getPractitionerId($nik) {
